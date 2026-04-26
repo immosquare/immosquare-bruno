@@ -1,0 +1,20 @@
+meta {
+  name: show
+  type: http
+  seq: 2
+}
+
+get {
+  url: https://{{baseurl}}/v3/saved-searches/boNBod?user_id=40G1Ox
+  body: none
+  auth: none
+}
+
+params:query {
+  user_id: 40G1Ox
+}
+
+headers {
+  apiKey: {{apiKey}}
+  apiToken: {{apiToken}}
+}

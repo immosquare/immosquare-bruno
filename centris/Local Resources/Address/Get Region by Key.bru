@@ -1,0 +1,27 @@
+meta {
+  name: Get Region by Key
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/StateRegion('{{stateRegionKey}}')
+  body: none
+  auth: bearer
+}
+
+params:query {
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+vars:pre-request {
+  stateRegionKey:
+}
+
+docs {
+  Récupère une région administrative spécifique par sa clé (StateRegionKey).
+  Définir stateRegionKey dans les variables avant exécution.
+}

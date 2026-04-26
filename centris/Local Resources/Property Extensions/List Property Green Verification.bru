@@ -1,0 +1,24 @@
+meta {
+  name: List Property Green Verification
+  type: http
+  seq: 21
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/PropertyGreenVerification?$top=20&$count=true
+  body: none
+  auth: bearer
+}
+
+params:query {
+  $top: 20
+  $count: true
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+docs {
+  Liste les certifications écologiques des propriétés (LEED, Novoclimat, etc.).
+}

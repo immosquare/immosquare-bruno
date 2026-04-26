@@ -1,0 +1,21 @@
+meta {
+  name: agency export logiciel
+  type: http
+  seq: 4
+}
+
+post {
+  url: https://{{baseurl}}/v1/logiciel/agency/export?agency_login={{agency_login}}&agency_pass={{agency_pass}}
+  body: none
+  auth: none
+}
+
+query {
+  agency_login: {{agency_login}}
+  agency_pass: {{agency_pass}}
+}
+
+headers {
+  apiKey: {{apiKey}}
+  apiToken: {{apiToken}}
+}

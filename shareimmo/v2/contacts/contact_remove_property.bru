@@ -1,0 +1,24 @@
+meta {
+  name: contact_remove_property
+  type: http
+  seq: 5
+}
+
+delete {
+  url: https://{{host}}/api/v2/contacts/property
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  ApiKey: {{apiKey}}
+  ApiToken: {{apiToken}}
+}
+
+body:json {
+  {
+    "contact_uid": "4",
+    "property_uid": "50"
+  }
+}

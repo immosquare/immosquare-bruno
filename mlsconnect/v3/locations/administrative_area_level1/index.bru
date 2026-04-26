@@ -1,0 +1,26 @@
+meta {
+  name: index
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://{{baseurl}}/v3/locations/administrative_area_level1
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~country: abc123
+  ~search: provence
+}
+
+headers {
+  apiKey: {{apiKey}}
+  apiToken: {{apiToken}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

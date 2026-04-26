@@ -1,0 +1,27 @@
+meta {
+  name: Get Property Renovation by Key
+  type: http
+  seq: 16
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/PropertyRenovation('{{renovationKey}}')
+  body: none
+  auth: bearer
+}
+
+params:query {
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+vars:pre-request {
+  renovationKey:
+}
+
+docs {
+  Récupère une rénovation spécifique par sa clé (RenovationKey).
+  Définir renovationKey dans les variables avant exécution.
+}

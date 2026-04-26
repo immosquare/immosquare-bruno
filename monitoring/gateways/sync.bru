@@ -1,0 +1,23 @@
+meta {
+  name: sync
+  type: http
+  seq: 2
+}
+
+post {
+  url: https://{{baseurl}}/api/gateways/75Ed8q/sync
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{bearer_token_gateways}}
+}
+
+settings {
+  encodeUrl: true
+}

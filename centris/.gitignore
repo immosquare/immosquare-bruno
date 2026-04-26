@@ -1,0 +1,6 @@
+##============================================================##
+## Claude personal settings
+##============================================================##
+/.claude/settings.local.json
+/.claude/ralph/
+/.claude/.ralph-loop.local.md

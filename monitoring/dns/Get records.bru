@@ -1,0 +1,19 @@
+meta {
+  name: Get records
+  type: http
+  seq: 2
+}
+
+get {
+  url: https://{{baseurl}}/api/dns/zones/immosquare.me./records?type=ageozone=ca
+  body: json
+  auth: inherit
+}
+
+params:query {
+  type: ageozone=ca
+}
+
+headers {
+  Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiaW1tb3NxdWFyZV9kbnMifQ.bG_xmJM4wV8ByIQRGkvquqPiuLD_p76QIkepxQws5d0
+}

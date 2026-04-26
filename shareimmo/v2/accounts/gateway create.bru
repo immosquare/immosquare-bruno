@@ -1,0 +1,28 @@
+meta {
+  name: gateway create
+  type: http
+  seq: 7
+}
+
+post {
+  url: https://{{host}}/api/v2/accounts/12015/gateways
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  ApiKey: {{apiKey}}
+  ApiToken: {{apiToken}}
+}
+
+body:json {
+  {
+    "account_uid": "12015",
+    "gateway_id": 8,
+    "username": "test2",
+    "password": "test-pass",
+    "already_checked": 1
+  }
+  
+}

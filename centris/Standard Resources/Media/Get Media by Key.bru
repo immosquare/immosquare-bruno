@@ -1,0 +1,27 @@
+meta {
+  name: Get Media by Key
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/Media('{{mediaKey}}')
+  body: none
+  auth: bearer
+}
+
+params:query {
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+vars:pre-request {
+  mediaKey:
+}
+
+docs {
+  Récupère un média spécifique par sa clé (MediaKey).
+  Définir mediaKey dans les variables avant exécution.
+}

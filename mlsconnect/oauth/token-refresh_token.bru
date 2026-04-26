@@ -1,0 +1,28 @@
+meta {
+  name: token-refresh_token
+  type: http
+  seq: 2
+}
+
+post {
+  url: https://{{baseurl}}/oauth/token
+  body: json
+  auth: none
+}
+
+params:query {
+  : 
+}
+
+body:json {
+  {
+    "grant_type": "refresh_token",
+    "refresh_token": "64a77bbdcbee6138d90ba548995fba33e5d644f7b0a0747e735b0c7f2010bcaa",
+    "client_id": "E1henD5B5EFm44H6PwiJd0BKBeua_arzcrMoR6D93Sg",
+    "client_secret": "CAKKJi4IOX4Ynx3l6CvG9N7GlQpuKG5VepUbjxBhRRU"
+  }
+}
+
+body:multipart-form {
+  grant_type: refresh_token
+}

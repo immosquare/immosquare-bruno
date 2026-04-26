@@ -1,0 +1,33 @@
+meta {
+  name: Service Deepflow - partir d-IMMOFACILE
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://staging.storeimmo.io/fr/api/v1/services?email=info@crypto.fr&api_key=OeQUNe7iKUdDbuywIn_ZHw&api_token=mVeHewQPFniZuKgCfbz4_g&product_sku=DEEP-FL&pricing_sku=DEEP-FW1
+  body: json
+  auth: none
+}
+
+params:query {
+  email: info@crypto.fr
+  api_key: OeQUNe7iKUdDbuywIn_ZHw
+  api_token: mVeHewQPFniZuKgCfbz4_g
+  product_sku: DEEP-FL
+  pricing_sku: DEEP-FW1
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {  
+    "application_params": {
+      "provider": "pagesimmo",
+      "id":	   123,
+      "cryptml": null
+    }
+  }
+}

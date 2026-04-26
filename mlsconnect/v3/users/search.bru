@@ -1,0 +1,23 @@
+meta {
+  name: search
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://{{baseurl}}/v3/users/search?active=true
+  body: none
+  auth: none
+}
+
+params:query {
+  active: true
+  ~email: jchiron@immosquare.com
+  ~created_at: "2021-06-16T14:40:24.307294+02:00"
+  ~updated_at: "2021-06-16T14:40:24.307294+02:00"
+}
+
+headers {
+  apiKey: {{apiKey}}
+  apiToken: {{apiToken}}
+}

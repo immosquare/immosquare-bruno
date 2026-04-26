@@ -1,0 +1,17 @@
+meta {
+  name: visiblity_retrieve
+  type: http
+  seq: 2
+}
+
+get {
+  url: https://{{host}}/api/v2/visibilities/50
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  ApiKey: {{apiKey}}
+  ApiToken: {{apiToken}}
+}

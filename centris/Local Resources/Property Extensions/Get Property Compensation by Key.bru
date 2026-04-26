@@ -1,0 +1,27 @@
+meta {
+  name: Get Property Compensation by Key
+  type: http
+  seq: 32
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/PropertyCompensation('{{compensationKey}}')
+  body: none
+  auth: bearer
+}
+
+params:query {
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+vars:pre-request {
+  compensationKey:
+}
+
+docs {
+  Récupère une compensation par sa clé (CompensationKey).
+  Définir compensationKey dans les variables avant exécution.
+}

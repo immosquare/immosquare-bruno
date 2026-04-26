@@ -1,0 +1,24 @@
+meta {
+  name: List Property Buyers
+  type: http
+  seq: 27
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/PropertyBuyer?$top=20&$count=true
+  body: none
+  auth: bearer
+}
+
+params:query {
+  $top: 20
+  $count: true
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+docs {
+  Liste les acheteurs de propriétés.
+}

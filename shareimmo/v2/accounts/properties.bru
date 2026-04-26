@@ -1,0 +1,23 @@
+meta {
+  name: properties
+  type: http
+  seq: 5
+}
+
+get {
+  url: https://immosquare.me:3000/fr/api/v2/accounts/1/properties?order=desc&order_by=id&per_page=200
+  body: json
+  auth: none
+}
+
+query {
+  order: desc
+  order_by: id
+  per_page: 200
+}
+
+headers {
+  Content-Type: application/json
+  apiKey: {{apiKey}}
+  apiToken: {{apiToken}}
+}

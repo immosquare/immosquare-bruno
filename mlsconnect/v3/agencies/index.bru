@@ -1,0 +1,23 @@
+meta {
+  name: index
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://{{baseurl}}/v3/agencies/search?mls_board={{mls_cote_azur}}
+  body: none
+  auth: none
+}
+
+params:query {
+  ~active: true
+  ~email: valette@agence-villiers.com
+  ~created_at: "2022-05-23T14:15:23.579368+02:00"
+  ~updated_at: "2024-05-19T13:17:30.587958+02:00"
+}
+
+headers {
+  apiKey: {{apiKey}}
+  apiToken: {{apiToken}}
+}

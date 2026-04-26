@@ -1,0 +1,27 @@
+meta {
+  name: Get Property Expense by Key
+  type: http
+  seq: 15
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/PropertyExpense('{{expenseKey}}')
+  body: none
+  auth: bearer
+}
+
+params:query {
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+vars:pre-request {
+  expenseKey:
+}
+
+docs {
+  Récupère une dépense spécifique par sa clé (ExpenseKey).
+  Définir expenseKey dans les variables avant exécution.
+}

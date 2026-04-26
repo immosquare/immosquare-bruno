@@ -1,0 +1,75 @@
+meta {
+  name: retrieve
+  type: http
+  seq: 4
+}
+
+get {
+  url: https://{{host}}/api/v2/accounts/123
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  ApiKey: {{apiKey}}
+  ApiToken: {{apiToken}}
+}
+
+body:json {
+  {
+    "country": "FR",
+    "public_email": "cyrielle_public@shareimmo.com",
+    "first_name": "Cyrielle",
+    "last_name": "Bocquet",
+    "phone": "514 568-6780",
+    "phone_sms": "514 568-6780",
+    "phone_visibility": 1,
+    "website": "www.wgroupe.com",
+    "spoken_languages": "fr,en",
+    "picture_url": "http://lorempicsum.com/futurama/255/200/5",
+    "facebook_url": "https://www.facebook.com/jules.welsch",
+    "twitter_url": "https://twitter.com/jules_welsch",
+    "linkedin_url": "https://ca.linkedin.com/pub/jules-welsch/91/463/991",
+    "pinterest_url": "https://www.pinterest.com/juleswelsch/",
+    "google_plus_url": "https://plus.google.com/",
+    "instagram_url": "https://instagram.com/cyrielle_bocquet/",
+    "company_name": "Wgroupe",
+    "company_address": "460 rue sainte catherine Ouest #300",
+    "company_city": "Montréal",
+    "company_zipcode": "H3B1A8",
+    "company_administrative_area": "Québec",
+    "company_logo_url": "http://lorempicsum.com/futurama/350/200/6",
+    "corporate_account": 1,
+    "color1": "#f54029",
+    "color2": "#f54029",
+    "presentation_text": {
+      "fr": "professionnel de l'immobilier de luxe",
+      "en": "Luxury real estate broker",
+      "de": "Luxus Immobilien Berufs",
+      "nl": "Luxe onroerend goed professional",
+      "it": "Immobili di lusso professionale",
+      "es": "Lujo profesional de bienes raíces",
+      "pt": "profissional Imóveis de luxo"
+    },
+    "bio": {
+      "fr": "<h1>Bonjour</h1>,<p>je m'appelle ...</p>",
+      "en": "<h1>Hello</h1><p> I'm ...</p>",
+      "de": "<h1>Hallo</h1><p> Ich bin ...</p>",
+      "nl": "<h1>Hallo</h1><p> Ik ben ...</p>",
+      "it": "<h1>Hello</h1><p> Sono ...</p>",
+      "es": "<h1>Hola</h1><p> Estoy ...</p>",
+      "pt": "<h1>Hello</h1><p> Eu sou ...</p>"
+    },
+    "baseline": {
+      "fr": "la meilleur place pour acheter",
+      "en": "the best place to buy",
+      "de": "der beste Ort, um zu kaufen",
+      "nl": "de beste plek om te kopen",
+      "it": "il posto migliore per comprare",
+      "es": "el mejor lugar para comprar",
+      "pt": "o melhor lugar para comprar"
+    }
+  }
+  
+}

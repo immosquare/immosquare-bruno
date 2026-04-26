@@ -1,0 +1,36 @@
+meta {
+  name: contact_retrieve
+  type: http
+  seq: 2
+}
+
+get {
+  url: https://{{host}}/api/v2/contacts/4
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  ApiKey: {{apiKey}}
+  ApiToken: {{apiToken}}
+}
+
+body:json {
+  {
+    "uid": "4",
+    "account_uid": "123",
+    "email": "cyrielle@bienvenue.com",
+    "last_name": "Cyrielle",
+    "first_name": "Bocquet",
+    "type": 2,
+    "phone": "+1 514 568 6780",
+    "address": {
+      "street_name": "460, rue Sainte-Catherine Ouest",
+      "city": "Montréal",
+      "zipcode": "h3E 0A8",
+      "country": "CA"
+    },
+    "picture_url": "https://randomuser.me/api/portraits/men/80.jpg"
+  }
+}

@@ -1,0 +1,27 @@
+meta {
+  name: Get Additional Building by Key
+  type: http
+  seq: 19
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/PropertyAdditionalBuilding('{{additionalBuildingKey}}')
+  body: none
+  auth: bearer
+}
+
+params:query {
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+vars:pre-request {
+  additionalBuildingKey:
+}
+
+docs {
+  Récupère un bâtiment additionnel par sa clé (AdditionalBuildingKey).
+  Définir additionalBuildingKey dans les variables avant exécution.
+}

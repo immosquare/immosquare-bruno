@@ -1,0 +1,27 @@
+meta {
+  name: Get City by Key
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/CityOrTownship('{{cityOrTownshipKey}}')
+  body: none
+  auth: bearer
+}
+
+params:query {
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+vars:pre-request {
+  cityOrTownshipKey:
+}
+
+docs {
+  Récupère une ville/municipalité spécifique par sa clé (CityOrTownshipKey).
+  Définir cityOrTownshipKey dans les variables avant exécution.
+}

@@ -1,0 +1,27 @@
+meta {
+  name: Properties by Price Range
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/Property?$filter=ListPrice ge 200000 and ListPrice le 500000 and StandardStatus eq 'Active'&$orderby=ListPrice asc&$top=20&$count=true
+  body: none
+  auth: bearer
+}
+
+params:query {
+  $filter: ListPrice ge 200000 and ListPrice le 500000 and StandardStatus eq 'Active'
+  $orderby: ListPrice asc
+  $top: 20
+  $count: true
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+docs {
+  Filtre les propriétés actives dans une fourchette de prix.
+  Ajuster les valeurs min/max selon vos besoins.
+}

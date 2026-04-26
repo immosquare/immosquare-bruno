@@ -1,0 +1,16 @@
+meta {
+  name: delete
+  type: http
+  seq: 3
+}
+
+delete {
+  url: https://{{host}}/api/v2/agencies/LCP
+  body: none
+  auth: none
+}
+
+headers {
+  apiKey: {{centris_apiKey}}
+  apiToken: {{centris_apiToken}}
+}

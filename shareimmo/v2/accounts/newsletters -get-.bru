@@ -1,0 +1,24 @@
+meta {
+  name: newsletters -get-
+  type: http
+  seq: 5
+}
+
+get {
+  url: https://{{host}}/api/v2/accounts/123/newsletters
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  ApiKey: c0a6e43f-4eef-4263-b40d-bc2a6cc07f40
+  ApiToken: e03de136-e4ed-4d8e-bafe-ddf8cba0ec19
+  FlowName: monSuperFlowName
+}
+
+body:json {
+  {
+    "email" : "jules@shareimmo.com"
+  }
+}

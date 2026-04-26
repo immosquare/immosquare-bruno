@@ -1,0 +1,25 @@
+meta {
+  name: Property Full Details
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/Property?$expand=Media,Rooms,Units,Equipment,Expenses,ListAgentOffices,Translations&$top=1
+  body: none
+  auth: bearer
+}
+
+params:query {
+  $expand: Media,Rooms,Units,Equipment,Expenses,ListAgentOffices,Translations
+  $top: 1
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+docs {
+  Récupère une propriété avec ses ressources liées principales.
+  Expands confirmés: Media, Rooms, Units, Equipment, Expenses, ListAgentOffices, Translations
+}

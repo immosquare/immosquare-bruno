@@ -1,0 +1,17 @@
+meta {
+  name: check_brokers_master_0
+  type: http
+  seq: 2
+}
+
+post {
+  url: https://{{baseurl}}/api/v1/api/v1/centris/check_brokers_master_0
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "mls": ["22351749", "26493540", "12770217"]
+  }
+}

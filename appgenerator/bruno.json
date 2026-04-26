@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "appgenerator",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

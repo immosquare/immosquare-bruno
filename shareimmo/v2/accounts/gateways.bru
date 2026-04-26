@@ -1,0 +1,17 @@
+meta {
+  name: gateways
+  type: http
+  seq: 6
+}
+
+get {
+  url: https://{{host}}/api/v2/accounts/12015/gateways
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  ApiKey: {{apiKey}}
+  ApiToken: {{apiToken}}
+}

@@ -1,0 +1,25 @@
+meta {
+  name: List Lookups
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/Lookup?$top=100&$count=true
+  body: none
+  auth: bearer
+}
+
+params:query {
+  $top: 100
+  $count: true
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+docs {
+  Liste toutes les valeurs de lookup (tables de référence).
+  Les lookups incluent: PropertyType, StandardStatus, Heating, Cooling, etc.
+}

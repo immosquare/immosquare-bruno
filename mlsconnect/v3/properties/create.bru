@@ -1,0 +1,467 @@
+meta {
+  name: create
+  type: http
+  seq: 4
+}
+
+post {
+  url: https://{{baseurl}}/v3/properties
+  body: json
+  auth: none
+}
+
+headers {
+  apiKey: {{apiKey}}
+  apiToken: {{apiToken}}
+}
+
+body:json {
+  {
+    "app_id": "Z1Bj1gK",
+    "uid": null,
+    "reference": "FR00009",
+    "online_at": "2011-06-06T18:46:07.000000+02:00",
+    "sharing_date_at": null,
+    "created_at": "2011-06-06T18:46:07.063000+02:00",
+    "offline_at": "2024-01-03T22:09:33.676275+01:00",
+    "is_on_portal": false,
+    "is_mls": false,
+    "is_private": true,
+    "mls_board": {
+      "id": "{{mls_cote_azur}}"
+    },
+    "agency": {
+      "id": "zAd8EA"
+    },
+    "user": {
+      "active": true,
+      "first_name": "John",
+      "last_name": "Doe",
+      "display_mobile": true,
+      "mobile": "+33601020304",
+      "phone": "0102030405",
+      "email": "it@immosquare.com",
+      "member_since_at": "2009-01-16T01:00:00.000000+01:00",
+      /*"licence_label": "Carte pro : 06052016000009450",*/
+      "rights": "agency_admin"
+    },
+    "mandate": {
+      "cadastre": "",
+      "number": "11/06/01",
+      "co_ownership": true,
+      "lot_number": null,
+      "lot_number_secondary": null,
+      "start_date": "2011-06-06",
+      "end_date": "2012-06-06",
+      "effect_date": null,
+      "urgency_sale": false,
+      "slug": "exclusive"
+    },
+    "property_type": {
+      "slug": "appartment",
+      "sub_type": {
+        "slug": null
+      }
+    },
+    "transaction_type": {
+      "slug": "mandate-withdrawal"
+    },
+    "transaction_status": {
+      "slug": "for-sale",
+      "sub_status": {
+        "end_market_date": "2024-01-03T22:09:33.676275+01:00",
+        "offer_accepted_date": null,
+        "compromise_date": null,
+        "sold_or_rent_date": null,
+        "withdrawal_date": "2024-01-03T22:09:33.676275+01:00",
+        "slug": "mandate-removed-by-mandator"
+      }
+    },
+    "lease": {
+      "is_sold_with_tenant": false,
+      "availability_date": "2011-06-06",
+      "slug": null
+    },
+    "pictures": [
+      {
+        "url": "https://cdn.static.immosquare.com/mlsconnect/production/asset/attachment/e07a5cf5-68c5-46bf-8bf9-0cb9a289fe5b.jpg",
+        "name": "Chambre 1",
+        "order": 1,
+        "allowed_to_display": true
+      },
+      {
+        "url": "https://cdn.static.immosquare.com/mlsconnect/production/asset/attachment/b2eb4b7d-d0f5-4bdc-a778-bb47b322f5d7.jpg",
+        "name": "Chambre 3",
+        "order": 2,
+        "allowed_to_display": true
+      },
+      {
+        "url": "https://cdn.static.immosquare.com/mlsconnect/production/asset/attachment/3fad47e8-d253-4be4-a65e-8598c9030a43.jpg",
+        "name": "Cuisine",
+        "order": 3,
+        "allowed_to_display": true
+      },
+      {
+        "url": "https://cdn.static.immosquare.com/mlsconnect/production/asset/attachment/d800892d-ef4e-469a-8a0d-e2753e0ca62e.jpg",
+        "name": "Salle de bain",
+        "order": 4,
+        "allowed_to_display": true
+      },
+      {
+        "url": "https://cdn.static.immosquare.com/mlsconnect/production/asset/attachment/54f2f2a1-e644-45e0-b378-6113c86186d1.jpg",
+        "name": "vue",
+        "order": 5,
+        "allowed_to_display": true
+      },
+      {
+        "url": "https://cdn.static.immosquare.com/mlsconnect/production/asset/attachment/d466cb4f-b9ab-4c11-bb56-f2f8df86f6f3.jpg",
+        "name": "Séjour",
+        "order": 6,
+        "allowed_to_display": true
+      }
+    ],
+    "documents": [],
+    "virtual_visits": [],
+    "address": {
+      "allowed_to_display": true,
+      "address_formatted": "28e rue pasteur, 57000 Metz",
+      "street_number": "28e",
+      "street_name": "rue pasteur",
+      "zipcode": "57000",
+      "locality": "Metz",
+      "sublocality": "",
+      "latitude": "49.1082267",
+      "longitude": "6.1708221",
+      "administrative_area_level1": "Moselle",
+      "administrative_area_level2": "Grand-Est",
+      "country": "France",
+      "country_iso_code": "fr"
+    },
+    "country_detail": {
+      "fr": {
+        "dpe": {
+          "dpe_number": null,
+          "date_start": null,
+          "date_end": null,
+          "dpe_letter": "E",
+          "dpe_value": 237.0,
+          "ges_letter": "C",
+          "ges_value": 11.0,
+          "dpe_lower_price": null,
+          "dpe_higher_price": null,
+          "dpe_year_reference": null,
+          "dpe_url": null,
+          "dpe_no_subject_to": false
+        },
+        "alur": {
+          "procedure_in_progress": false,
+          "procedure_details": null,
+          "number_of_lots": 0
+        }
+      },
+      "be": null,
+      "it": null
+    },
+    "title": {
+      "fr": "<span class='fw-semibold'>Appartement</span>  - 3 pièces  - 54.0 m<sup>2</sup> -  <span class='fw-semibold'>199 000 €</span> - Retiré "
+    },
+    "description": {
+      "fr": "NICE CENTRE APPARTEMENT - au cœur de la ville de Nice, à proximité immédiate de l'avenue Jean Médecin et du tramway, charmant 3 pièces de 55m² traversant en bon état général avec séjour cuisine américaine, deux chambres au calme et mezzanine aménagée comme chambre d'appoint supplémentaire. 2e étage sans ascenseur."
+    },
+    "confidential_information": {
+      "fr": ""
+    },
+    "visit_information": {
+      "fr": ""
+    },
+    "agency_confidential_information": {
+      "fr": null
+    },
+    "url_more_infos": null,
+    "surface_areas": {
+      "area_unit": "m2",
+      "area_total": 79,
+      "area_carrez_law": 54.0,
+      "area_living_room": 25.0,
+      "area_terrace": null,
+      "area_garden": null,
+      "area_land": null,
+      "area_storeroom": null,
+      "area_annexes": null,
+      "area_balcony": null,
+      "area_floor": null,
+      "area_ces": null,
+      "area_annexes_notes": ""
+    },
+    "rooms": {
+      "rooms": 3,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "half_bathrooms": null,
+      "toilets": 1,
+      "maid_rooms": null
+    },
+    "general": {
+      "new_program": false,
+      "new_program_delivery": "2011-06-06",
+      "garage": null,
+      "outside": null,
+      "underground": null,
+      "location_number": "",
+      "visitor": null,
+      "parkings_nearby": null,
+      "floor": 2,
+      "level": null,
+      "cellar": null,
+      "loggia": false,
+      "attic": null,
+      "convertible_attic": false,
+      "high_ceilings": null,
+      "minimum_division": null,
+      "shop_window_width": null,
+      "quiet_property": false,
+      "shared_services": false,
+      "last_floor": false,
+      "key_at_agency": true,
+      "building_permit": false,
+      "building_permit_date": null,
+      "private_garden": false,
+      "air_conditioning": false,
+      "partition": false,
+      "conduit": false,
+      "investor_program": false,
+      "furnished": false,
+      "fireplace": false,
+      "construction_date": null,
+      "outbuildings": "",
+      "activities": "",
+      "authorized_activities": "",
+      "house_name": "",
+      "school_nearby": false,
+      "convenient_store_nearby": false,
+      "transports_nearby": null,
+      "viabilisation": false,
+      "facades_number": null,
+      "alarm": null,
+      "possibility_of_liberal_profession": null,
+      "vehicle_number": null,
+      "pool": null,
+      "tennis": null,
+      "elevator": null,
+      "handicapped_access": false,
+      "single_storey": null,
+      "interphone": null,
+      "digicode": null,
+      "balcony": null,
+      "terrace": null
+    },
+    "characteristics": {
+      "access": {
+        "slug": null
+      },
+      "adjoining_building": {
+        "slug": null
+      },
+      "closure": {
+        "slug": null
+      },
+      "condition": {
+        "slug": "good"
+      },
+      "configuration": {
+        "slug": null
+      },
+      "exposition": {
+        "slug": "south"
+      },
+      "external_wall": {
+        "slug": null
+      },
+      "legal_status": {
+        "slug": null
+      },
+      "floor": {
+        "slug": null
+      },
+      "flooring": {
+        "slug": null
+      },
+      "garage_status": {
+        "slug": null
+      },
+      "glazing": {
+        "slug": null
+      },
+      "heating": {
+        "slug": "radiator"
+      },
+      "heating_method": {
+        "slug": null
+      },
+      "hot_water": {
+        "slug": null
+      },
+      "kitchen": {
+        "slug": "furnitured"
+      },
+      "roof": {
+        "slug": "tiles"
+      },
+      "sanitation": {
+        "slug": null
+      },
+      "shutter": {
+        "slug": null
+      },
+      "standing": {
+        "slug": null
+      },
+      "style": {
+        "slug": null
+      },
+      "surroundings": {
+        "slug": null
+      },
+      "transferred_element": {
+        "slug": null
+      },
+      "vegetation": {
+        "slug": null
+      },
+      "view_principal": {
+        "slug": null
+      },
+      "view": {
+        "slug": "city"
+      },
+      "woodwork": {
+        "slug": null
+      },
+      "optical_fiber": {
+        "slug": null
+      }
+    },
+    "financial": {
+      "currency": "eur",
+      "price": 199000.0,
+      "tax1_annual": 700.0,
+      "tax2_annual": null,
+      "fees_annual": 804.0,
+      "offer_from": false,
+      "tax_system": {
+        "slug": "registration-fees"
+      },
+      "honorary": {
+        "honorary": 13930.0,
+        "honorary_buyer": 13930.0,
+        "honorary_seller": null,
+        "honorary_rate": null,
+        "honorary_rate_buyer": null,
+        "honorary_rate_seller": null,
+        "fee_type": {
+          "slug": "acquereur"
+        },
+        "honorary_visit": null,
+        "honorary_inventories": null
+      },
+      "rental": {
+        "is_student_rental": null,
+        "is_seasonal_rental": false,
+        "rent": null,
+        "rent_frequency": "monthly",
+        "income_annual": null,
+        "charge": 67.0,
+        "charge_frequency": "monthly",
+        "charge_included": true,
+        "security_deposit": null,
+        "charge_modality": {
+          "slug": null
+        }
+      },
+      "formatted": {
+        "european_format": {
+          "price": "199 000 €",
+          "tax1_annual": "700 €",
+          "tax2_annual": "0 €",
+          "fees_annual": "804 €",
+          "honorary": {
+            "honorary": "13 930 €",
+            "honorary_buyer": "13 930 €",
+            "honorary_seller": "",
+            "honorary_visit": "0 €",
+            "honorary_inventories": "0 €"
+          },
+          "rental": {
+            "rent": "0 €",
+            "income_annual": "0 €",
+            "charge": "67 €",
+            "security_deposit": "0 €"
+          }
+        },
+        "american_format": {
+          "price": "€199,000",
+          "tax1_annual": "€700",
+          "tax2_annual": "€0",
+          "fees_annual": "€804",
+          "honorary": {
+            "honorary": "€13,930",
+            "honorary_buyer": "€13,930",
+            "honorary_seller": "",
+            "honorary_visit": "€0",
+            "honorary_inventories": "€0"
+          },
+          "rental": {
+            "rent": "€0",
+            "income_annual": "€0",
+            "charge": "€67",
+            "security_deposit": "€0"
+          }
+        }
+      }
+    },
+    "building": {
+      "name": "28 rue pasteur",
+      "elevator": false,
+      "pool": false,
+      "tennis": false,
+      "park": false,
+      "number_of_floors": 5,
+      "number_of_lots": 0,
+      "last_renovating_facade": null,
+      "outbuildings": null,
+      "period": "1920",
+      "caretaker": false,
+      "garden": false,
+      "secure_access": false,
+      "private_garden": false,
+      "handicapped_access": false,
+      "parking_lot": false,
+      "works_planned": false,
+      "children_playground": false,
+      "bike_storage": false,
+      "laundry": false,
+      "sports_hall": false,
+      "surveillance": false,
+      "interphone": false,
+      "videophone": false,
+      "digicode": false,
+      "characteristics": {
+        "construction": {
+          "slug": null
+        },
+        "heating": {
+          "slug": "individual"
+        },
+        "hot_water": {
+          "slug": "individual"
+        },
+        "standing": {
+          "slug": null
+        }
+      }
+    },
+    "open_doors": [],
+    "price_evolutions": [],
+    "rooms_details": []
+  }
+}

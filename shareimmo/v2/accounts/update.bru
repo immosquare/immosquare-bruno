@@ -1,0 +1,87 @@
+meta {
+  name: update
+  type: http
+  seq: 3
+}
+
+put {
+  url: https://{{host}}/api/v2/accounts/123
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  FlowName: superflow1
+  apiKey: {{apiKey}}
+  apiToken: {{apiToken}}
+}
+
+body:json {
+  {
+    "reference": "ref:123456",
+    "country": "FR",
+    "email": "cyrielle_public@shareimmo.com",
+    "first_name": "Cyrielle",
+    "last_name": "Bocquet",
+    "phone": "514 568-6780",
+    "phone_sms": "514 568-6780",
+    "phone_fax": "514 568-6781",
+    "phone_visibility": 1,
+    "picture_original_url": "http://lorempicsum.com/futurama/255/200/5",
+    "website": "www.wgroupe.com",
+    "spoken_languages": "fr,en",
+    "facebook_url": "https://www.facebook.com/jules.welsch",
+    "twitter_url": "https://twitter.com/jules_welsch",
+    "linkedin_url": "https://ca.linkedin.com/pub/jules-welsch/91/463/991",
+    "pinterest_url": "https://www.pinterest.com/juleswelsch/",
+    "google_plus_url": "https://plus.google.com/",
+    "instagram_url": "https://instagram.com/cyrielle_bocquet/",
+    "youtube_url": "https://www.youtube.com/",
+    "primary_color": "#ee2737",
+    "secondary_color": "#00c389",
+    "color1_print": "1788 C",
+    "color2_print": "3395 C",
+    "corporate_account": 1,
+    "agency_name": "Wgroupe",
+    "agency_phone": "514 700-1963",
+    "company_email": "contact@immosquare.com",
+    "company_logo_url": "http://lorempicsum.com/futurama/350/200/6",
+    "presentation_text": {
+      "fr": "professionnel de l'immobilier de luxe",
+      "en": "Luxury real estate broker",
+      "it": "Immobili di lusso professionale",
+      "es": "Lujo profesional de bienes raíces"
+    },
+    "bio": {
+      "fr": "<h1>Bonjour</h1>,<p>je m'appelle ...</p>",
+      "en": "<h1>Hello</h1><p> I'm ...</p>",
+      "it": "<h1>Hello</h1><p> Sono ...</p>",
+      "es": "<h1>Hola</h1><p> Estoy ...</p>"
+    },
+    "baseline": {
+      "fr": "la meilleur place pour acheter",
+      "en": "the best place to buy",
+      "it": "il posto migliore per comprare",
+      "es": "el mejor lugar para comprar"
+    },
+    "billing_address": {
+      "address1": "460 rue Sainte Catherine Ouest",
+      "address2": "suite 300",
+      "city": "Montréal",
+      "country": "Canada",
+      "province": "Québec",
+      "zipcode": "H3B 1A7"
+    },
+    "shipping_address":{
+      "address1": "480 rue Sainte Catherine Ouest",
+      "address2": "suite 400",
+      "city": "Montréal",
+      "country": "Canada",
+      "province": "Québec",
+      "zipcode": "H3B 1A7"
+    }
+  
+  }
+  
+}

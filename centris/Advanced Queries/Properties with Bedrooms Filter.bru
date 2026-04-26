@@ -1,0 +1,26 @@
+meta {
+  name: Properties with Bedrooms Filter
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/Property?$filter=BedroomsTotal ge 3 and StandardStatus eq 'Active'&$select=ListingKey,ListPrice,City,BedroomsTotal,BathroomsTotalInteger&$top=20&$count=true
+  body: none
+  auth: bearer
+}
+
+params:query {
+  $filter: BedroomsTotal ge 3 and StandardStatus eq 'Active'
+  $select: ListingKey,ListPrice,City,BedroomsTotal,BathroomsTotalInteger
+  $top: 20
+  $count: true
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+docs {
+  Filtre les propriétés avec au moins 3 chambres.
+}

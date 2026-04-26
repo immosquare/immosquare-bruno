@@ -1,0 +1,27 @@
+meta {
+  name: Get List Agent Office by Key
+  type: http
+  seq: 34
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/PropertyListAgentOffice('{{listAgentOfficeKey}}')
+  body: none
+  auth: bearer
+}
+
+params:query {
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+vars:pre-request {
+  listAgentOfficeKey:
+}
+
+docs {
+  Récupère un bureau de courtier inscripteur par sa clé (ListAgentOfficeKey).
+  Définir listAgentOfficeKey dans les variables avant exécution.
+}

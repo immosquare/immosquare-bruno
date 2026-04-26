@@ -1,0 +1,16 @@
+meta {
+  name: deactivate
+  type: http
+  seq: 1
+}
+
+delete {
+  url: https://{{baseurl}}/v3/projects/search/WaMmKW
+  body: json
+  auth: inherit
+}
+
+headers {
+  apiKey: {{apiKey}}
+  apiToken: {{apiToken}}
+}

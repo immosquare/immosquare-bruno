@@ -1,0 +1,24 @@
+meta {
+  name: List Associations
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/Association?$top=10&$count=true
+  body: none
+  auth: bearer
+}
+
+params:query {
+  $top: 10
+  $count: true
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+docs {
+  Liste les associations immobilières.
+}

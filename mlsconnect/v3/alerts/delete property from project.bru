@@ -1,0 +1,16 @@
+meta {
+  name: delete property from project
+  type: http
+  seq: 7
+}
+
+delete {
+  url: https://{{baseurl}}/v3/projects/search/WaMmKW/dXN88b
+  body: json
+  auth: inherit
+}
+
+headers {
+  apiKey: {{apiKey}}
+  apiToken: {{apiToken}}
+}

@@ -1,0 +1,29 @@
+meta {
+  name: Media by Property
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/Media?$filter=ResourceRecordKey eq '{{propertyKey}}'&$orderby=Order asc
+  body: none
+  auth: bearer
+}
+
+params:query {
+  $filter: ResourceRecordKey eq '{{propertyKey}}'
+  $orderby: Order asc
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+vars:pre-request {
+  propertyKey:
+}
+
+docs {
+  Récupère tous les médias d'une propriété spécifique.
+  Définir propertyKey dans les variables avant exécution.
+}

@@ -1,0 +1,23 @@
+meta {
+  name: search
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://{{baseurl}}/v3/connects/search
+  body: json
+  auth: inherit
+}
+
+headers {
+  apiKey: {{apiKey}}
+  apiToken: {{apiToken}}
+}
+
+body:json {
+  {
+   "contact": "XSF4TN",
+   "default": true
+  }
+}

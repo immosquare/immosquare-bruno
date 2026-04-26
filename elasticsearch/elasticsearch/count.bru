@@ -1,0 +1,50 @@
+meta {
+  name: count
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{protocol}}://{{user}}:{{password}}@{{base_url}}:9200/mlsconnect_{{env}}_property/_count
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "query": {
+      "bool": {
+        "filter": [],
+        "should": [],
+        "must": [
+         {
+            "bool": {
+              "should": [
+                {
+                  "bool": {
+                    "must": [
+                      {
+                        "terms": {
+                          "transaction_type.slug": [
+                            "for-sale",
+                            "to-rent"
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ],
+              "minimum_should_match": 1
+            }
+          }
+        ],
+        "must_not": []
+      }
+    }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

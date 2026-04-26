@@ -1,0 +1,24 @@
+meta {
+  name: List Property Compensations
+  type: http
+  seq: 31
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/PropertyCompensation?$top=20&$count=true
+  body: none
+  auth: bearer
+}
+
+params:query {
+  $top: 20
+  $count: true
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+docs {
+  Liste les compensations (rétributions) des propriétés.
+}

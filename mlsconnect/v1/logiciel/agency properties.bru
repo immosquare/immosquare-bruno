@@ -1,0 +1,23 @@
+meta {
+  name: agency properties
+  type: http
+  seq: 3
+}
+
+post {
+  url: https://{{baseurl}}/v1/logiciel/agency/properties
+  body: none
+  auth: none
+}
+
+query {
+  ~agency_login: {{agency_login}}
+  ~agency_pass: {{agency_pass}}
+  ~page: 1
+  ~active: 0
+}
+
+headers {
+  apiKey: {{apiKey}}
+  apiToken: {{apiToken}}
+}

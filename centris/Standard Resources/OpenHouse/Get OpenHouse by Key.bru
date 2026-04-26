@@ -1,0 +1,27 @@
+meta {
+  name: Get OpenHouse by Key
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/OpenHouse('{{openHouseKey}}')
+  body: none
+  auth: bearer
+}
+
+params:query {
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+vars:pre-request {
+  openHouseKey:
+}
+
+docs {
+  Récupère une visite libre spécifique par sa clé (OpenHouseKey).
+  Définir openHouseKey dans les variables avant exécution.
+}

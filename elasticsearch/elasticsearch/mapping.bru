@@ -1,0 +1,15 @@
+meta {
+  name: mapping
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{protocol}}://{{user}}:{{password}}@{{base_url}}:9200/mlsconnect_{{env}}_property/_mapping
+  body: json
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

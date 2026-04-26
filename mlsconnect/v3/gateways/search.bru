@@ -1,0 +1,25 @@
+meta {
+  name: search
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://{{baseurl}}/v3/gateways/?mls_board=Yv68Wm
+  body: none
+  auth: inherit
+}
+
+params:query {
+  mls_board: Yv68Wm
+}
+
+headers {
+  apiKey: {{apiKey}}
+  apiToken: {{apiToken}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

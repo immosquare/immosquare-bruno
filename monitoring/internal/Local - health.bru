@@ -1,0 +1,186 @@
+meta {
+  name: Local - health
+  type: http
+  seq: 3
+}
+
+post {
+  url: https://immosquare.me:4005/api/internal/health
+  body: json
+  auth: bearer
+}
+
+headers {
+  : 
+}
+
+auth:bearer {
+  token: {{bearer_token}}
+}
+
+body:json {
+  {
+    "datas":[
+    {
+      "url": "https://staging.ag-connect.fr/health",
+      "name": "agconnect",
+      "env": "staging"
+    },
+    {
+      "url": "https://staging.ag-connect.ca/health",
+      "name": "agconnect",
+      "env": "staging"
+    },
+    {
+      "url": "https://staging-bnp.ag-connect.fr/health",
+      "name": "agconnect",
+      "env": "staging"
+    },
+    {
+      "url": "https://preprod.ag-connect.fr/health",
+      "name": "agconnect",
+      "env": "preprod"
+    },
+    {
+      "url": "https://preprod.ag-connect.ca/health",
+      "name": "agconnect",
+      "env": "preprod"
+    },
+    {
+      "url": "https://ag-connect.fr/health",
+      "name": "agconnect",
+      "env": "production"
+    },
+    {
+      "url": "https://ag-connect.ca/health",
+      "name": "agconnect",
+      "env": "production"
+    },
+    {
+      "url": "https://ag.realestate.bnpparibas/health",
+      "name": "agconnect",
+      "env": "bnp"
+    },
+    {
+      "url": "https://staging.appgenerator.me/health",
+      "name": "appgenerator",
+      "env": "staging"
+    },
+    {
+      "url": "https://preprod.appgenerator.me/health",
+      "name": "appgenerator",
+      "env": "preprod"
+    },
+    {
+      "url": "https://appgenerator.me/health",
+      "name": "appgenerator",
+      "env": "production"
+    },
+    {
+      "url": "https://staging.cloudphoto.io/health",
+      "name": "cloudphoto",
+      "env": "staging"
+    },
+    {
+      "url": "https://preprod.cloudphoto.io/health",
+      "name": "cloudphoto",
+      "env": "preprod"
+    },
+    {
+      "url": "https://app.cloudphoto.io/health",
+      "name": "cloudphoto",
+      "env": "production"
+    },
+    {
+      "url": "https://staging.mls-connect.com/health",
+      "name": "mlsconnect",
+      "env": "staging"
+    },
+    {
+      "url": "https://preprod.mls-connect.com/health",
+      "name": "mlsconnect",
+      "env": "preprod"
+    },
+    {
+      "url": "https://app.mls-connect.com/health",
+      "name": "mlsconnect",
+      "env": "production"
+    },
+    {
+      "url": "https://staging.monitoring.immosquare.com/health",
+      "name": "monitoring",
+      "env": "staging"
+    },
+    {
+      "url": "https://monitoring.immosquare.com/health",
+      "name": "monitoring",
+      "env": "production"
+    },
+    {
+      "url": "https://staging.myprint.io/health",
+      "name": "myprint",
+      "env": "staging"
+    },
+    {
+      "url": "https://preprod.myprint.io/health",
+      "name": "myprint",
+      "env": "preprod"
+    },
+    {
+      "url": "https://app.myprint.io/health",
+      "name": "myprint",
+      "env": "production"
+    },
+    {
+      "url": "https://staging.prestige-mls.com/health",
+      "name": "prestigemls",
+      "env": "staging"
+    },
+    {
+      "url": "https://prestige-mls.com/health",
+      "name": "prestigemls",
+      "env": "production"
+    },
+    {
+      "url": "https://staging.1clic.immo/health",
+      "name": "shareimmo",
+      "env": "staging"
+    },
+    {
+      "url": "https://preprod.1clic.immo/health",
+      "name": "shareimmo",
+      "env": "preprod"
+    },
+    {
+      "url": "https://app.1clic.immo/health",
+      "name": "shareimmo",
+      "env": "production"
+    },
+    {
+      "url": "https://staging.socialimmo.io/health",
+      "name": "socialimmo",
+      "env": "staging"
+    },
+    {
+      "url": "https://app.socialimmo.io/health",
+      "name": "socialimmo",
+      "env": "production"
+    },
+    {
+      "url": "https://staging.storeimmo.io/health",
+      "name": "storeimmo",
+      "env": "staging"
+    },
+    {
+      "url": "https://preprod.storeimmo.io/health",
+      "name": "storeimmo",
+      "env": "preprod"
+    },
+    {
+      "url": "https://storeimmo.io/health",
+      "name": "storeimmo",
+      "env": "production"
+    }
+  ]
+  }
+}

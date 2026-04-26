@@ -1,0 +1,16 @@
+meta {
+  name: read message
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://{{baseurl}}/v3/connects/search/qXog8A/read
+  body: json
+  auth: inherit
+}
+
+headers {
+  apiKey: {{apiKey}}
+  apiToken: {{apiToken}}
+}

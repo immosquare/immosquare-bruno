@@ -1,0 +1,27 @@
+meta {
+  name: Get Address by Key
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/Address('{{addressKey}}')
+  body: none
+  auth: bearer
+}
+
+params:query {
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+vars:pre-request {
+  addressKey:
+}
+
+docs {
+  Récupère une adresse spécifique par sa clé (AddressKey).
+  Définir addressKey dans les variables avant exécution.
+}

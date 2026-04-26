@@ -1,0 +1,26 @@
+meta {
+  name: Filter Properties by Status
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/Property?$filter=StandardStatus eq 'Active'&$top=10&$count=true
+  body: none
+  auth: bearer
+}
+
+params:query {
+  $filter: StandardStatus eq 'Active'
+  $top: 10
+  $count: true
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+docs {
+  Filtre les propriétés par statut.
+  Valeurs possibles: Active, Pending, Sold, Expired, Cancelled, etc.
+}

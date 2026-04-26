@@ -1,0 +1,18 @@
+meta {
+  name: brokers
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://{{baseurl}}/api/v1/centris/brokers
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "offices_ids": null,
+    "banner_ids": ["ROYLEP"]
+  }
+}

@@ -1,0 +1,53 @@
+meta {
+  name: Autoconnect crypto -staging-
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://staging.storeimmo.io/fr/authentication/crypto?action=login&agency_id=54X99996&signature=03ace9aa91f717b1e2b2d3d245f37bb9
+  body: json
+  auth: none
+}
+
+params:query {
+  action: login
+  agency_id: 54X99996
+  signature: 03ace9aa91f717b1e2b2d3d245f37bb9
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "Password": "mv9ChpI0F8AV3AHle+xrAg==%0A",
+    "Adresse 1": "25 rue de Saurupt",
+    "Adresse 2": "BP 70655",
+    "Adresse 3": "",
+    "CP": "54063",
+    "CaisseGarantie": "",
+    "CarteG": "9999",
+    "CarteS": "",
+    "CarteT": "9999",
+    "Coordonnees bancaires": "N° 04536094687 auprès de la Société Générale de NANCY",
+    "Email": "info@crypto.fr",
+    "Fax": "0383901606",
+    "MGarantieG": "250 0000 €",
+    "MGarantieS": "",
+    "MGarantieT": "",
+    "Mention Legale": "SA au capital de 300 000 € et dont le RCS est le 63252p",
+    "Montant Garantie": "100 000 €",
+    "Nom Agence": "CRYPTO DEV",
+    "Nom Prenom Gerant": "Jeff Le CHEF\rGérant",
+    "Num Carte Garantie": "00023",
+    "Prefecture": "Meurthe-et-Moselle",
+    "SIRET": "123456",
+    "Tel": "0383903636",
+    "URL": "www.crypto.fr",
+    "URL Logo Agence": "http://photos.pagesimmo.com/054/54X99996/54X99996-102-000.jpg",
+    "Ville": "NANCY CEDEX",
+    "Ville Edition": "Nancy"
+  }
+}

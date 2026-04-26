@@ -1,0 +1,16 @@
+meta {
+  name: retrieve
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://{{baseurl}}/v3/contacts/search/3NVDv6
+  body: json
+  auth: inherit
+}
+
+headers {
+  apiKey: {{apiKey}}
+  apiToken: {{apiToken}}
+}

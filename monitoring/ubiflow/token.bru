@@ -1,0 +1,23 @@
+meta {
+  name: token
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://auth.ubiflow.net/api/login_check
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "username": "{{ubiflow_username}}",
+    "password": "{{ubiflow_password}}"
+  }
+}
+
+script:post-response {
+  const data = res.getBody()
+  bru.setEnvVar("bearer_token", data.token);
+}

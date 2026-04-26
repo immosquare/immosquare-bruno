@@ -1,0 +1,29 @@
+meta {
+  name: Create
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://{{baseurl}}/api/dns/zones/1clic.immo./records
+  body: json
+  auth: inherit
+}
+
+headers {
+  Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiaW1tb3NxdWFyZV9kbnMifQ.bG_xmJM4wV8ByIQRGkvquqPiuLD_p76QIkepxQws5d0
+}
+
+body:json {
+  {
+    "domain": "1clic.immo.",
+    "records": [
+      {
+        "data": "g05uZ77s89BCd2a81UVndqlj2DSylbYE0OAdgLRSQUc",
+        "name": "_acme-challenge.staging",
+        "ttl": 0,
+        "type": "TXT"
+      }
+    ]
+  }
+}

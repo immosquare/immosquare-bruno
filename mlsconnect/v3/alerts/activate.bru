@@ -1,0 +1,16 @@
+meta {
+  name: activate
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://{{baseurl}}/v3/projects/search/WaMmKW
+  body: json
+  auth: inherit
+}
+
+headers {
+  apiKey: {{apiKey}}
+  apiToken: {{apiToken}}
+}

@@ -1,0 +1,24 @@
+meta {
+  name: Office with Expand
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/Office?$expand=OtherPhone,SocialMedia&$top=5
+  body: none
+  auth: bearer
+}
+
+params:query {
+  $expand: OtherPhone,SocialMedia
+  $top: 5
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+docs {
+  Récupère les bureaux avec leurs téléphones et réseaux sociaux.
+}

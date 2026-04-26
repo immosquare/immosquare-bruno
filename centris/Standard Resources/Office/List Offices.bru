@@ -1,0 +1,24 @@
+meta {
+  name: List Offices
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/Office?$top=10&$count=true
+  body: none
+  auth: bearer
+}
+
+params:query {
+  $top: 10
+  $count: true
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+docs {
+  Liste les bureaux immobiliers.
+}

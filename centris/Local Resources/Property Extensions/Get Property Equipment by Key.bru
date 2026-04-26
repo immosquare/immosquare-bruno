@@ -1,0 +1,27 @@
+meta {
+  name: Get Property Equipment by Key
+  type: http
+  seq: 14
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/PropertyEquipment('{{equipmentKey}}')
+  body: none
+  auth: bearer
+}
+
+params:query {
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+vars:pre-request {
+  equipmentKey:
+}
+
+docs {
+  Récupère un équipement spécifique par sa clé (EquipmentKey).
+  Définir equipmentKey dans les variables avant exécution.
+}

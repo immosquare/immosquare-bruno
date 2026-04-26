@@ -1,0 +1,16 @@
+meta {
+  name: retrieve
+  type: http
+  seq: 2
+}
+
+get {
+  url: https://{{baseurl}}/v3/properties/search/b1ezWk
+  body: none
+  auth: none
+}
+
+headers {
+  apiKey: {{apiKey}}
+  apiToken: {{apiToken}}
+}

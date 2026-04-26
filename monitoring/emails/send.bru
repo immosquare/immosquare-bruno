@@ -1,0 +1,36 @@
+meta {
+  name: send
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://{{baseurl}}/api/emails/send
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+  : 
+}
+
+auth:bearer {
+  token: {{bearer_token_emails}}
+}
+
+body:json {
+  {
+    "to": "jules@immosquare.com",
+    "subject": "[TEST] API emails monitoring",
+    "html": "<!DOCTYPE html><html><body><div style=\"padding:1rem;\"><h2 style=\"color:#28a745;\">Test API emails</h2><div>Si tu recois cet email, l'endpoint <code>POST /api/emails/send</code> fonctionne.</div></div></body></html>",
+    "from": "no-reply@immosquare.com",
+    "app": "monitoring",
+    "env": "development"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,21 @@
+meta {
+  name: list_by_agency
+  type: http
+  seq: 2
+}
+
+get {
+  url: https://api-classifieds.ubiflow.net/api/ads?page=1&advertiser.id=923415
+  body: none
+  auth: none
+}
+
+params:query {
+  page: 1
+  advertiser.id: 923415
+}
+
+headers {
+  Accept: application/ld+json
+  X-AUTH-TOKEN: Bearer {{bearer_token}}
+}

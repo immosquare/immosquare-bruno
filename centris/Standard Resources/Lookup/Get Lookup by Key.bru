@@ -1,0 +1,27 @@
+meta {
+  name: Get Lookup by Key
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/Lookup('{{lookupKey}}')
+  body: none
+  auth: bearer
+}
+
+params:query {
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+vars:pre-request {
+  lookupKey:
+}
+
+docs {
+  Récupère une valeur de lookup spécifique par sa clé (LookupKey).
+  Définir lookupKey dans les variables avant exécution.
+}

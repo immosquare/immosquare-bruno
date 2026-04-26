@@ -1,0 +1,27 @@
+meta {
+  name: Get Translation by Key
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/Translation('{{translationKey}}')
+  body: none
+  auth: bearer
+}
+
+params:query {
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+vars:pre-request {
+  translationKey:
+}
+
+docs {
+  Récupère une traduction spécifique par sa clé (TranslationKey).
+  Définir translationKey dans les variables avant exécution.
+}

@@ -1,0 +1,21 @@
+meta {
+  name: agency get sectors
+  type: http
+  seq: 9
+}
+
+post {
+  url: https://{{baseurl}}/v2/logiciel/agency/sectors?agency_login={{agency_login}}&agency_pass={{agency_pass}}
+  body: none
+  auth: none
+}
+
+query {
+  agency_login: {{agency_login}}
+  agency_pass: {{agency_pass}}
+}
+
+headers {
+  apiKey: {{apiKey}}
+  apiToken: {{apiToken}}
+}

@@ -1,0 +1,34 @@
+meta {
+  name: Pagination Example
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/Property?$skip=0&$top=100&$count=true&$orderby=ModificationTimestamp asc
+  body: none
+  auth: bearer
+}
+
+params:query {
+  $skip: 0
+  $top: 100
+  $count: true
+  $orderby: ModificationTimestamp asc
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+docs {
+  Exemple de pagination.
+  $skip: nombre d'enregistrements à sauter (0 = première page)
+  $top: nombre d'enregistrements par page (max généralement 200)
+  $count: retourne le nombre total pour calculer le nombre de pages
+
+  Pour la page suivante, incrémenter $skip de la valeur de $top.
+  Exemple: Page 2 = $skip=100, Page 3 = $skip=200, etc.
+
+  Note: La réponse peut inclure @odata.nextLink avec l'URL de la page suivante.
+}

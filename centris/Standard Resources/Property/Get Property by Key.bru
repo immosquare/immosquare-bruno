@@ -1,0 +1,27 @@
+meta {
+  name: Get Property by Key
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/Property('{{propertyKey}}')
+  body: none
+  auth: bearer
+}
+
+params:query {
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+vars:pre-request {
+  propertyKey:
+}
+
+docs {
+  Récupère une propriété spécifique par sa clé (ListingKey).
+  Définir propertyKey dans les variables avant exécution.
+}

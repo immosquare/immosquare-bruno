@@ -1,0 +1,38 @@
+meta {
+  name: Sync Changes Since Date
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/Property?$filter=ModificationTimestamp gt 2024-01-01T00:00:00Z&$orderby=ModificationTimestamp asc&$top=200&$count=true
+  body: none
+  auth: bearer
+}
+
+params:query {
+  $filter: ModificationTimestamp gt 2024-01-01T00:00:00Z
+  $orderby: ModificationTimestamp asc
+  $top: 200
+  $count: true
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+docs {
+  Requête de synchronisation incrémentale.
+
+  Stratégie recommandée:
+  1. Première sync: récupérer toutes les propriétés
+  2. Syncs suivantes: filtrer par ModificationTimestamp > dernière sync
+  3. Trier par ModificationTimestamp asc pour traiter dans l'ordre
+  4. Paginer avec $skip/$top si plus de 200 résultats
+
+  Important: ModificationTimestamp est mis à jour quand:
+  - La propriété elle-même change
+  - Une ressource enfant change (Rooms, Media, etc.)
+
+  Pour détecter les suppressions: comparer vos IDs locaux avec les IDs retournés.
+}

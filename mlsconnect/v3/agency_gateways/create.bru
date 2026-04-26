@@ -1,0 +1,30 @@
+meta {
+  name: create
+  type: http
+  seq: 3
+}
+
+post {
+  url: https://{{baseurl}}/v3/agencies/oAlYy0/gateways
+  body: json
+  auth: none
+}
+
+headers {
+  apiKey: {{apiKey}}
+  apiToken: {{apiToken}}
+}
+
+body:json {
+  {
+    "api_provider": "4LwJrJ",
+    "pending": false,
+    "import": true,
+    "import_file_name": "534",
+    "import_type": "api",
+    "import_api_pass": "FA3D4FDF707780063919DE7401C17BCE",
+    "export": false,
+    "export_file_name": "",
+    "export_type": "api"
+  }
+}

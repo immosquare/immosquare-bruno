@@ -1,0 +1,25 @@
+meta {
+  name: index
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://{{baseurl}}/v3/locations/countries
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~search: france
+}
+
+headers {
+  apiKey: {{apiKey}}
+  apiToken: {{apiToken}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

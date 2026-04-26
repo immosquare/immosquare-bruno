@@ -1,0 +1,32 @@
+meta {
+  name: search
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://{{baseurl}}/v3/properties/search?saved_search_id=boNBod&price_from=500000
+  body: none
+  auth: none
+}
+
+params:query {
+  saved_search_id: boNBod
+  price_from: 500000
+  ~fields: id,reference,price,price_by_area,area,rooms,bedrooms,address,zipcode,property_type,transaction_type,agency,locality,sublocality
+  ~mls_board: Yv68Wm
+  ~mandate: simple
+  ~agency: VyPBNL
+  ~mls_board: 4qNoW8
+  ~transaction_type: for-sale
+  ~bedrooms: 4
+  ~transaction_type!: sold
+  ~is_mls: true
+  ~is_private: true
+  ~mls_board: 1WrDvX
+}
+
+headers {
+  apiKey: {{apiKey}}
+  apiToken: {{apiToken}}
+}

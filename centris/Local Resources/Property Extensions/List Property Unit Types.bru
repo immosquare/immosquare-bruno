@@ -1,0 +1,24 @@
+meta {
+  name: List Property Unit Types
+  type: http
+  seq: 23
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/PropertyUnitTypes?$top=20&$count=true
+  body: none
+  auth: bearer
+}
+
+params:query {
+  $top: 20
+  $count: true
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+docs {
+  Liste les types d'unités des propriétés.
+}

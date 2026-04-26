@@ -1,0 +1,27 @@
+meta {
+  name: Get Buyer Agent Office by Key
+  type: http
+  seq: 30
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/PropertyBuyerAgentOffice('{{buyerAgentOfficeKey}}')
+  body: none
+  auth: bearer
+}
+
+params:query {
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+vars:pre-request {
+  buyerAgentOfficeKey:
+}
+
+docs {
+  Récupère un bureau de courtier acheteur par sa clé (BuyerAgentOfficeKey).
+  Définir buyerAgentOfficeKey dans les variables avant exécution.
+}

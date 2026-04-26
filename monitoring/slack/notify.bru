@@ -1,0 +1,29 @@
+meta {
+  name: notify
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://{{baseurl}}/api/slack/notify
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{bearer_token_slack}}
+}
+
+body:json {
+  {
+    "message": "Test du message"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

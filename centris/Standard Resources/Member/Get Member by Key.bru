@@ -1,0 +1,27 @@
+meta {
+  name: Get Member by Key
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/Member('{{memberKey}}')
+  body: none
+  auth: bearer
+}
+
+params:query {
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+vars:pre-request {
+  memberKey:
+}
+
+docs {
+  Récupère un membre spécifique par sa clé (MemberKey).
+  Définir memberKey dans les variables avant exécution.
+}

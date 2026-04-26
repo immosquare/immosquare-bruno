@@ -1,0 +1,24 @@
+meta {
+  name: search_building
+  type: http
+  seq: 2
+}
+
+get {
+  url: https://{{host}}/api/v2/search/buildings/12
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  ApiKey: {{apiKey}}
+  ApiToken: {{apiToken}}
+}
+
+body:json {
+  {
+    "contact_uid": "4",
+    "property_uid": "50"
+  }
+}

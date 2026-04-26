@@ -1,0 +1,150 @@
+meta {
+  name: create
+  type: http
+  seq: 3
+}
+
+post {
+  url: https://{{baseurl}}/v3/agencies/
+  body: json
+  auth: none
+}
+
+headers {
+  apiKey: {{apiKey}}
+  apiToken: {{apiToken}}
+}
+
+body:json {
+  {
+    "mls_board": "1WrDvX",
+    "uid": "SHAREIMMO4",
+    "mls_status": true,
+    "name": "Agence Shareimmo 12",
+    "commercial_name": "Agence Shareimmo 1",
+    "phone": "0353163235",
+    "email": "lucio@example.net",
+    "website_url": "",
+    "created_at": "2003-05-23T02:00:00.000000+02:00",
+    "updated_at": "2025-11-21T12:25:16.879171+01:00",
+    "logo_url": "https://cdn.static-staging.immosquare.com/mlsconnect-development/development/jerome/agency/logo/c671c2ab-e9a3-4308-abf9-6c6ef9aad84f.png",
+    "agency_picture_url": "https://cdn.static-staging.immosquare.com/mlsconnect-development/development/jerome/agency/agency_photo/84cac9ce-f671-4763-b868-d69273f77427.jpg",
+    "agency_header_url": null,
+    "agency_footer_url": "https://cdn.static-staging.immosquare.com/mlsconnect-development/development/jerome/agency/agency_footer/075b3ec5-26e5-41ed-ad68-b7e925b74bea.jpg",
+    "address": {
+      "address_formatted": "10 Boulevard Albert 1er 06600 ANTIBES",
+      "street_number": "10",
+      "street_name": "Boulevard Albert 1er",
+      "zipcode": "06600",
+      "locality": "Antibes",
+      "sublocality": null,
+      "latitude": "43.5792007446289",
+      "longitude": "7.1216697692871",
+      "administrative_area_level1": "Provence-Alpes-Côte D'azur",
+      "administrative_area_level2": "Alpes-Maritimes",
+      "country": "France",
+      "country_iso_code": "fr"
+    },
+    "legal": {
+      "registration_number_label": "N°SIRET : 79490112400675",
+      "registration_number": "79490112400675",
+      "registration_name": "Agence Rousseau SA",
+      "registration_id_label": "N°SIREN : 483441598",
+      "registration_id": "483441598",
+      "registration_location": "Antibes",
+      "legal_representative": null,
+      "social_capital": "762200",
+      "fr": {
+        "guarantee_fund": {
+          "type": "fund_mention_1",
+          "name": "Monte Paschi",
+          "address": "",
+          "policy_number": "255306185",
+          "escrow_account_number": "641565866",
+          "escrow_account_location": ""
+        },
+        "insurance": {
+          "name": "ALLIANZ",
+          "address": null,
+          "policy_number": "777191370"
+        }
+      }
+    },
+    "licence": {
+      "holder": "Pépin Marty",
+      "label": "Carte pro : 087228417",
+      "number": "087228417",
+      "type": null,
+      "delivery_location": "NICE",
+      "validity_date_start": null,
+      "validity_date_end": "2019-06-01"
+    },
+    "description": {
+      "fr": "Enim labore iusto. Praesentium aut animi. Blanditiis et assumenda. Illum deleniti et. Similique incidunt est. Et cupiditate eum. A nostrum debitis.",
+      "fr-BE": "Enim labore iusto. Praesentium aut animi. Blanditiis et assumenda. Illum deleniti et. Similique incidunt est. Et cupiditate eum. A nostrum debitis.",
+      "fr-CA": "Enim labore iusto. Praesentium aut animi. Blanditiis et assumenda. Illum deleniti et. Similique incidunt est. Et cupiditate eum. A nostrum debitis.",
+      "en": null,
+      "es": null,
+      "es-LA": null,
+      "it": null,
+      "nl": null,
+      "pt": null,
+      "pt-BR": null,
+      "de": null,
+      "ru": "Enim labore iusto. Praesentium aut animi. Blanditiis et assumenda. Illum deleniti et. Similique incidunt est. Et cupiditate eum. A nostrum debitis."
+    },
+    "user":{
+    "first_name": "Odon",
+    "last_name": "BERTINE",
+    "display_mobile": true,
+    "mobile": "+33789898989",
+    "phone": "",
+    "email": "lilian482@example.org",
+    "director": false,
+    "public_url": "",
+    "picture_url": "https://cdn.static-staging.immosquare.com/mlsconnect-development/development/jerome/user/avatar/4ea67500-f0d8-4e7d-bfb2-a0a95143b91b.jpeg",
+    "time_zone": "Paris",
+    "member_since_at": "2019-07-29T02:00:00.000000+02:00",
+    "created_at": "2019-07-29T02:00:00.000000+02:00",
+    "updated_at": "2025-01-09T09:43:04.601313+01:00",
+    "role": "assistant",
+    "licence": {
+      "type": "cpi_card",
+      "agent_label": null,
+      "agent_id": "",
+      "licence_label": "Carte pro : 1",
+      "licence_id": "1",
+      "validity_date_start": null,
+      "validity_date_end": null
+    },
+    "languages": [
+      {
+        "code": "fr",
+        "fr": "Français",
+        "en": "French",
+        "es": "Francés",
+        "it": "Francese",
+        "nl": "Frans",
+        "pt": "Francês",
+        "de": "Französisch",
+        "ru": "Французский"
+      }
+    ],
+    "description": {
+      "fr": "Molestiae quasi nulla. Corporis explicabo doloremque. Delectus rem explicabo. Asperiores incidunt expedita. Quis exercitationem et. Quos nihil asperiores. Repudiandae est qui. Nisi eos id. Voluptate aut alias.",
+      "fr-BE": "Molestiae quasi nulla. Corporis explicabo doloremque. Delectus rem explicabo. Asperiores incidunt expedita. Quis exercitationem et. Quos nihil asperiores. Repudiandae est qui. Nisi eos id. Voluptate aut alias.",
+      "fr-CA": "Molestiae quasi nulla. Corporis explicabo doloremque. Delectus rem explicabo. Asperiores incidunt expedita. Quis exercitationem et. Quos nihil asperiores. Repudiandae est qui. Nisi eos id. Voluptate aut alias.",
+      "en": "",
+      "es": "",
+      "es-LA": "",
+      "it": "",
+      "nl": "",
+      "pt": "Molestiae quasi nulla. Corporis explicabo doloremque. Delectus rem explicabo. Asperiores incidunt expedita. Quis exercitationem et. Quos nihil asperiores. Repudiandae est qui. Nisi eos id. Voluptate aut alias.",
+      "pt-BR": "Molestiae quasi nulla. Corporis explicabo doloremque. Delectus rem explicabo. Asperiores incidunt expedita. Quis exercitationem et. Quos nihil asperiores. Repudiandae est qui. Nisi eos id. Voluptate aut alias.",
+      "de": "Molestiae quasi nulla. Corporis explicabo doloremque. Delectus rem explicabo. Asperiores incidunt expedita. Quis exercitationem et. Quos nihil asperiores. Repudiandae est qui. Nisi eos id. Voluptate aut alias.",
+      "ru": "Molestiae quasi nulla. Corporis explicabo doloremque. Delectus rem explicabo. Asperiores incidunt expedita. Quis exercitationem et. Quos nihil asperiores. Repudiandae est qui. Nisi eos id. Voluptate aut alias."
+    }
+    }
+    
+  }
+}

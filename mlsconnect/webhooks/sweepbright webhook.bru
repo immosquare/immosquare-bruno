@@ -1,0 +1,15 @@
+meta {
+  name: sweepbright webhook
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://{{baseurl}}/webhooks/sweepbright/property/521
+  body: json
+  auth: none
+}
+
+body:json {
+  {"event":"estate-updated","estate_id":"71e68e3f-342e-4e34-ae2a-555a5e2de98a","happened_at":"2024-09-16T09:11:37+00:00","company_id":"300527ff-1218-4dc5-9390-ba89b71f98b7","uid":"521","webhook":{"event":"estate-updated","estate_id":"526f1fc7-7b98-4e6b-b1bd-e034c6da283e","happened_at":"2024-09-16T09:11:37+00:00","company_id":"300527ff-1218-4dc5-9390-ba89b71f98b7"}}
+}

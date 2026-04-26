@@ -1,0 +1,27 @@
+meta {
+  name: Get Property Buyer by Key
+  type: http
+  seq: 28
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/PropertyBuyer('{{buyerKey}}')
+  body: none
+  auth: bearer
+}
+
+params:query {
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+vars:pre-request {
+  buyerKey:
+}
+
+docs {
+  Récupère un acheteur par sa clé (BuyerKey).
+  Définir buyerKey dans les variables avant exécution.
+}

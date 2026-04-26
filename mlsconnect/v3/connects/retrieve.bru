@@ -1,0 +1,17 @@
+
+meta {
+  name: retrieve
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://{{baseurl}}/v3/connects/search/qXog8A
+  body: json
+  auth: inherit
+}
+
+headers {
+  apiKey: {{apiKey}}
+  apiToken: {{apiToken}}
+}

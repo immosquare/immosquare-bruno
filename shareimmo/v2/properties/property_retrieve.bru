@@ -1,0 +1,293 @@
+meta {
+  name: property_retrieve
+  type: http
+  seq: 2
+}
+
+get {
+  url: https://{{host}}/api/v2/properties/57A40743_1665
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  ApiKey: {{apiKey}}
+  ApiToken: {{apiToken}}
+}
+
+body:json {
+  {
+    "uid": "50",
+    "account_uid": "123",
+    "building_uid": "3",
+    "online": 1,
+    "classification_id": 201,
+    "status_id": 1,
+    "listing_id": 2,
+    "unit": "Appt #603",
+    "level": 6,
+    "cadastre": "nordelec-603",
+    "flag_id": 1,
+    "year_of_built": 2012,
+    "availability_date": "2017-01-16",
+    "is_luxurious": 1,
+     "address": {
+      "address_visibility": 1,
+      "address_formatted": "1740 Rue St-Patrick, Montréal, QC H3K 2H2, Canada",
+      "street_number": "1740",
+      "street_name": "Rue Saint-Patrick",
+      "zipcode": "H3K 2H2",
+      "locality": "Montréal",
+      "sublocality": "Pointe-Saint-Charles",
+      "administrative_area_level1": "Québec",
+      "administrative_area_level2": "Communauté-Urbaine-de-Montréal",
+      "country": "CA",
+      "latitude": 45.4854,
+      "longitude": -73.5629
+    },
+    "area": {
+      "living": 1000,
+      "balcony": 20,
+      "land": null,
+      "unit_id": 2
+    },
+    "rooms": {
+      "rooms": 3,
+      "bathrooms": 1,
+      "bedrooms": 1,
+      "showerrooms": null,
+      "toilets": 1
+    },
+    "title": {
+      "fr": "Superbe Appartement",
+      "en": "superb Apartment",
+      "de": "Superb Wohnung",
+      "nl": "schitterend Appartement",
+      "it": "schitterend Appartement",
+      "es": "Excelente Apartamento",
+      "pt": "Excelente Apartamento"
+    },
+    "description_short": {
+      "fr": "Construit en 1913, le Nordelec demeure un exemple remarquable...",
+      "en": "Built in 1913, the Nordelec remains an outstanding example ...",
+      "de": "Erbaut im Jahr 1913, bleibt die Nordelec ein hervorragendes Beispiel ...",
+      "nl": "Gebouwd in 1913, de Nordelec blijft een uitstekend voorbeeld ...",
+      "it": "Costruito nel 1913, il Nordelec rimane un esempio eccezionale ...",
+      "es": "Construido en 1913, el Nordelec sigue siendo un ejemplo sobresaliente ...",
+      "pt": "Construído em 1913, o Nordelec continua a ser um exemplo notável ..."
+    },
+    "description": {
+      "fr": "<p><span>Un des beaux avantages de la vie aux condos Nordelec est l’accès exclusif à des espaces communs peu ordinaires</span></p>",
+      "en": "<p><span>One of the beautiful advantages of living in the condos is Nordelec exclusive access to unusual public areas</span></p>",
+      "de": "<p><span>Einer der schönsten Vorteile in den Eigentumswohnungen leben, ist Nordelec exklusiven Zugang zu ungewöhnlichen öffentlichen Bereichen</span></p>",
+      "nl": "<p><span>Een van de prachtige voordelen van het wonen in de appartementen is Nordelec exclusieve toegang tot ongebruikelijke openbare ruimten</span></p>",
+      "it": "<p><span>Una delle belle vantaggi di vivere in condomini è l'accesso esclusivo a Nordelec insolite aree pubbliche</span></p>",
+      "es": "<p><span>Una de las hermosas ventajas de vivir en los condominios es Nordelec acceso exclusivo a las zonas comunes inusuales</span></p>",
+      "pt": "<p><span>Uma das belas vantagens de viver em condomínios é de acesso exclusivo Nordelec para espaços públicos incomuns</span></p>"
+    },
+    "url": {
+      "fr": "http://www.exemple.com/fr/55",
+      "en": "http://www.exemple.com/en/55",
+      "de": "http://www.exemple.com/de/55",
+      "nl": "http://www.exemple.com/nl/55",
+      "it": "http://www.exemple.com/it/55",
+      "es": "http://www.exemple.com/es/55",
+      "pt": "http://www.exemple.com/pt/55"
+    },
+    "financial": {
+      "price": "",
+      "price_with_tax": 1,
+      "rent": "1150",
+      "fees": "145",
+      "rent_frequency": 30,
+      "tax1_annual": "1 500",
+      "tax2_annual": "2 541",
+      "income_annual": "0",
+      "deposit": null,
+      "currency": "CAD"
+    },
+    "pictures": [
+      { "url": "http://lorempicsum.com/nemo/627/300/9"},
+      { "url": "http://lorempicsum.com/nemo/627/300/2"},
+      { "url": "http://lorempicsum.com/nemo/627/300/1"}
+    ],
+    "canada": {
+      "mls": 123456
+    },
+    "france":{
+      "dpe_indice": null,
+      "dpe_value": null,
+      "dpe_id": null,
+      "ges_indice": null,
+      "ges_value": null,
+      "alur_is_condo": null,
+      "alur_units": null,
+      "alur_uninhabitables": null,
+      "alur_spending": null,
+      "alur_legal_action": null,
+      "rent_honorary": null,
+      "mandat_exclusif": null
+    },
+    "belgium":{
+      "peb_indice": null,
+      "peb_value": null,
+      "peb_id": null,
+      "building_permit": null,
+      "done_assignments": null,
+      "preemption_property":null,
+      "subdivision_permits":null,
+      "sensitive_flood_area": null,
+      "delimited_flood_zone":null,
+      "risk_area" :null
+    },
+    "other": {
+      "orientation":{
+        "north": 1,
+        "south": 0,
+        "east": 0,
+        "west": 1
+      },
+      "inclusion": {
+        "air_conditioning": 1,
+        "hot_water": 1,
+        "heated": 1,
+        "electricity": 0,
+        "furnished": 0,
+        "fridge": 1,
+        "cooker": 1,
+        "dishwasher": 1,
+        "dryer": 1,
+        "washer": 1,
+        "microwave": 0
+      },
+      "detail": {
+        "elevator": 1,
+        "laundry": 0,
+        "garbage_chute": 1,
+        "common_space": 1,
+        "janitor": 1,
+        "gym": 1,
+        "golf": 1,
+        "tennis": 1,
+        "sauna": 1,
+        "spa": 1,
+        "inside_pool": 0,
+        "outside_pool": 1,
+        "inside_parking": 1,
+        "outside_parking": 1,
+        "parking_on_street": 1,
+        "garagebox": 0
+      },
+      "half_furnished": {
+        "living_room": 0,
+        "bedrooms": 0,
+        "kitchen": 0,
+        "other": 0
+      },
+      "indoor": {
+        "attic": 0,
+        "attic_convertible": 0,
+        "attic_converted": 0,
+        "cellar": 0,
+        "central_vacuum": 0,
+        "entries_washer_dryer": 1,
+        "entries_dishwasher": 1,
+        "fireplace": 0,
+        "storage": 1,
+        "walk_in": 1,
+        "no_smoking": 1,
+        "double_glazing": 0,
+        "triple_glazing": 1
+      },
+      "floor": {
+        "carpet": 0,
+        "wood": 1,
+        "floating": 0,
+        "ceramic": 0,
+        "parquet": 0,
+        "cushion": 0,
+        "vinyle": 0,
+        "lino": 0,
+        "marble": 0
+      },
+      "exterior": {
+        "land_access": 0,
+        "back_balcony": 0,
+        "front_balcony": 1,
+        "private_patio": 1,
+        "storage": 1,
+        "terrace": 1,
+        "veranda": 0,
+        "garden": 0,
+        "sea_view": 0,
+        "mountain_view": 0
+      },
+      "accessibility": {
+        "elevator": 0,
+        "balcony": 0,
+        "grab_bar": 0,
+        "wider_corridors": 0,
+        "lowered_switches": 0,
+        "ramp": 0
+      },
+      "senior": {
+        "autonomy": 0,
+        "half_autonomy": 0,
+        "no_autonomy": 0,
+        "meal": 0,
+        "nursery": 0,
+        "domestic_help": 0,
+        "community": 0,
+        "activities": 0,
+        "validated_residence": 0,
+        "housing_cooperative": 0
+      },
+      "pet": {
+        "allow": 1,
+        "cat": 1,
+        "dog": 1,
+        "little_dog": 1,
+        "cage_aquarium": 1,
+        "not_allow": 0
+      },
+      "service": {
+        "internet": 1,
+        "tv": 1,
+        "tv_sat": 1,
+        "phone": 1
+      },
+      "composition": {
+        "bar": 0,
+        "living": 0,
+        "dining": 0,
+        "separate_toilet": 0,
+        "open_kitchen": 1
+      },
+      "heating": {
+        "electric": 1,
+        "solar": 0,
+        "gaz": 0,
+        "condensation": 0,
+        "fuel": 0,
+        "heat_pump": 0,
+        "floor_heating": 0
+      },
+      "transport": {
+        "bicycle_path": 1,
+        "public_transport": 1,
+        "public_bike": 1,
+        "subway": 1,
+        "train_station": 1
+      },
+      "security": {
+        "guardian": 1,
+        "alarm": 1,
+        "intercom": 1,
+        "camera": 1,
+        "smoke_dectector": 1
+      }
+    }
+  }
+  
+}

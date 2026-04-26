@@ -1,0 +1,25 @@
+meta {
+  name: List EntityEvent
+  type: http
+  seq: 11
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/EntityEvent?$top=50&$count=true
+  body: none
+  auth: bearer
+}
+
+params:query {
+  $top: 50
+  $count: true
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+docs {
+  Liste les événements d'entités (suivi des changements).
+  Utile pour la synchronisation incrémentale.
+}

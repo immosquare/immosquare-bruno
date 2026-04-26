@@ -1,0 +1,24 @@
+meta {
+  name: Property Select Fields
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/Property?$select=ListingKey,ListPrice,StandardStatus,City,PostalCode,BedroomsTotal,BathroomsTotalInteger&$top=10
+  body: none
+  auth: bearer
+}
+
+params:query {
+  $select: ListingKey,ListPrice,StandardStatus,City,PostalCode,BedroomsTotal,BathroomsTotalInteger
+  $top: 10
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+docs {
+  Récupère uniquement les champs spécifiés pour optimiser la réponse.
+}

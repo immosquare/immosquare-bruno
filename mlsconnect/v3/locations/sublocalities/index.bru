@@ -1,0 +1,29 @@
+meta {
+  name: index
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://{{baseurl}}/v3/locations/sublocalities
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~country: abc123
+  ~administrative_area_level1: abc123
+  ~administrative_area_level2: abc123
+  ~locality: abc123
+  ~search: chambrun
+}
+
+headers {
+  apiKey: {{apiKey}}
+  apiToken: {{apiToken}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,99 @@
+meta {
+  name: create-update
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://{{host}}/api/v2/agencies
+  body: json
+  auth: none
+}
+
+headers {
+  apiKey: {{centris_apiKey}}
+  apiToken: {{centris_apiToken}}
+}
+
+body:json {
+  {
+    "uid":      "LCP",
+    "name":     "VIA CAPITALE DU MONT-ROYAL",
+    "banner":   "viacapitale",
+    "color1":   "#01224B",
+    "color2":   "#1AB7EA",
+    "logo_url": "https://api.shareimmo.com/centris/logo_via.png",
+    "offices":  [
+      {
+        "uid":           "LCP001",
+        "name":          "SIEGE SOCIAL",
+        "phone":         "514 597-2121",
+        "email":         "mont-royal@viacapitale.com",
+        "address": {
+          "address_formatted":          "1152 Mont-Royal E., H2J1X8 Montréal",
+          "street_number":              "1152",
+          "street_name":                "Mont-Royal E.",
+          "zipcode":                    "H2J1X8",
+          "locality":                   "Montréal",
+          "sublocality":                null,
+          "administrative_area_level1": "QC",
+          "administrative_area_level2": null,
+          "country":                    "CA",
+          "longitude":                  null,
+          "latitude":                   null
+        },
+        "accounts_uids": [
+          "G2184",
+          "H4921",
+          "G5805",
+          "C5678",
+          "C8686",
+          "C1746",
+          "D0153",
+          "D1080",
+          "D5010",
+          "D5203",
+          "A9460",
+          "E0016",
+          "E1146",
+          "E1930",
+          "D7090",
+          "D1321",
+          "E0473",
+          "E6536",
+          "E9506",
+          "D1144",
+          "E3644",
+          "E3646",
+          "F0178",
+          "D7349",
+          "G2184",
+          "E2602",
+          "G5805",
+          "G6527",
+          "E1970",
+          "G7217",
+          "G4788",
+          "C4428",
+          "C0569",
+          "G9559",
+          "G8749",
+          "H1105",
+          "B9793",
+          "H0751",
+          "H2531",
+          "H1960",
+          "E8832",
+          "H3750",
+          "H4921",
+          "H6261",
+          "H6683",
+          "H7649",
+          "H9621",
+          "J1892",
+          "J2553"
+        ]
+      }
+    ]
+  }
+}

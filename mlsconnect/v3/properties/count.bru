@@ -1,0 +1,31 @@
+meta {
+  name: count
+  type: http
+  seq: 3
+}
+
+get {
+  url: https://{{baseurl}}/v3/properties/count?property_type=appartment&transaction_type=for-sale&location=c1_l522_s658
+  body: none
+  auth: none
+}
+
+params:query {
+  property_type: appartment
+  transaction_type: for-sale
+  location: c1_l522_s658
+  ~price_from: 500000
+  ~price_to: 1000000
+  ~area_from: 50
+  ~rooms_from: 2
+  ~bedrooms_from: 1
+  ~condition: good
+  ~online_at_gte: 2024-01-01
+  ~sold_date_at_gte: 2024-01-01
+  ~sold_date_at_lte: 2025-12-31
+}
+
+headers {
+  apiKey: {{apiKey}}
+  apiToken: {{apiToken}}
+}

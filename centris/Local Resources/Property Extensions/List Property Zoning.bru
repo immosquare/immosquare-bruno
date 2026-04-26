@@ -1,0 +1,24 @@
+meta {
+  name: List Property Zoning
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/PropertyZoning?$top=20&$count=true
+  body: none
+  auth: bearer
+}
+
+params:query {
+  $top: 20
+  $count: true
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+docs {
+  Liste les zonages des propriétés.
+}

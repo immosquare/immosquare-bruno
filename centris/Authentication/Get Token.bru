@@ -1,0 +1,23 @@
+meta {
+  name: Get Token
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{identityProviderUrl}}/connect/token
+  body: formUrlEncoded
+  auth: none
+}
+
+body:form-urlencoded {
+  grant_type: client_credentials
+  client_id: {{clientId}}
+  client_secret: {{clientSecret}}
+}
+
+docs {
+  Obtient un token OAuth2 via Client Credentials flow.
+  Définir clientId et clientSecret dans les variables avant exécution.
+  Le token retourné peut être utilisé dans le header Authorization: Bearer {access_token}.
+}

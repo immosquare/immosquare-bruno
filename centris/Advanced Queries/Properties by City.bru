@@ -1,0 +1,27 @@
+meta {
+  name: Properties by City
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/Property?$filter=City eq 'Montreal' and StandardStatus eq 'Active'&$top=20&$count=true
+  body: none
+  auth: bearer
+}
+
+params:query {
+  $filter: City eq 'Montreal' and StandardStatus eq 'Active'
+  $orderby: ModificationTimestamp desc
+  $top: 20
+  $count: true
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+docs {
+  Filtre les propriétés actives par ville.
+  Remplacer 'Montreal' par la ville souhaitée.
+}

@@ -1,0 +1,64 @@
+meta {
+  name: building_create_update
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://{{host}}/api/v2/buildings/
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  ApiKey: {{apiKey}}
+  ApiToken: {{apiToken}}
+}
+
+body:json {
+  {
+    "uid": "3",
+    "account_uid": "123",
+    "name": "Le nordelec",
+    "units": 250,
+    "levels": 8,
+    "address": {
+      "address_formatted": "1740 Rue St-Patrick, Montréal, QC H3K 2H2, Canada",
+      "street_number": "1740",
+      "street_name": "Rue Saint-Patrick",
+      "zipcode": "H3K 2H2",
+      "locality": "Montréal",
+      "sublocality": "Pointe-Saint-Charles",
+      "administrative_area_level1": "Québec",
+      "administrative_area_level2": "Communauté-Urbaine-de-Montréal",
+      "country": "CA",
+      "latitude": 45.4854,
+      "longitude": -73.5629
+    },
+    "description_short": {
+      "fr": "Construit en 1913, le Nordelec demeure un exemple remarquable...",
+      "en": "Built in 1913, the Nordelec remains an outstanding example ...",
+      "de": "Erbaut im Jahr 1913, bleibt die Nordelec ein hervorragendes Beispiel ...",
+      "nl": "Gebouwd in 1913, de Nordelec blijft een uitstekend voorbeeld ...",
+      "it": "Costruito nel 1913, il Nordelec rimane un esempio eccezionale ...",
+      "es": "Construido en 1913, el Nordelec sigue siendo un ejemplo sobresaliente ...",
+      "pt": "Construído em 1913, o Nordelec continua a ser um exemplo notável ..."
+    },
+    "description": {
+      "fr": "<p><span>Un des beaux avantages de la vie aux condos Nordelec est l’accès exclusif à des espaces communs peu ordinaires</span></p>",
+      "en": "<p><span>One of the beautiful advantages of living in the condos is Nordelec exclusive access to unusual public areas</span></p>",
+      "de": "<p><span>Einer der schönsten Vorteile in den Eigentumswohnungen leben, ist Nordelec exklusiven Zugang zu ungewöhnlichen öffentlichen Bereichen</span></p>",
+      "nl": "<p><span>Een van de prachtige voordelen van het wonen in de appartementen is Nordelec exclusieve toegang tot ongebruikelijke openbare ruimten</span></p>",
+      "it": "<p><span>Una delle belle vantaggi di vivere in condomini è l'accesso esclusivo a Nordelec insolite aree pubbliche</span></p>",
+      "es": "<p><span>Una de las hermosas ventajas de vivir en los condominios es Nordelec acceso exclusivo a las zonas comunes inusuales</span></p>",
+      "pt": "<p><span>Uma das belas vantagens de viver em condomínios é de acesso exclusivo Nordelec para espaços públicos incomuns</span></p>"
+    },
+    "pictures": [
+      { "url": "http://lorempicsum.com/nemo/627/300/9"},
+      { "url": "http://lorempicsum.com/nemo/627/300/2"},
+      { "url": "http://lorempicsum.com/nemo/627/300/1"}
+    ]
+  }
+  
+}

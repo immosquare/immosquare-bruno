@@ -1,0 +1,26 @@
+meta {
+  name: Upcoming OpenHouses
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/OpenHouse?$filter=OpenHouseDate ge 2024-01-01&$orderby=OpenHouseDate asc&$top=20
+  body: none
+  auth: bearer
+}
+
+params:query {
+  $filter: OpenHouseDate ge 2024-01-01
+  $orderby: OpenHouseDate asc
+  $top: 20
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+docs {
+  Récupère les prochaines visites libres.
+  Ajuster la date dans le filtre selon vos besoins.
+}

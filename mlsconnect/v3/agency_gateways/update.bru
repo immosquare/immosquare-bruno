@@ -1,0 +1,29 @@
+meta {
+  name: update
+  type: http
+  seq: 4
+}
+
+patch {
+  url: https://{{baseurl}}/v3/agencies/oAlYy0/gateways/Az9Mz
+  body: json
+  auth: none
+}
+
+headers {
+  apiKey: {{apiKey}}
+  apiToken: {{apiToken}}
+}
+
+body:json {
+  {
+    "pending": false,
+    "import": true,
+    "import_file_name": "53",
+    "import_type": "api",
+    "import_api_pass": "FA3D4FDF707780063919DE7401C17BCE",
+    "export": false,
+    "export_file_name": "",
+    "export_type": "api"
+  }
+}

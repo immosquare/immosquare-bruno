@@ -1,0 +1,16 @@
+meta {
+  name: index
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://{{baseurl}}/v3/mls-boards/search
+  body: none
+  auth: none
+}
+
+headers {
+  apiKey: {{apiKey}}
+  apiToken: {{apiToken}}
+}

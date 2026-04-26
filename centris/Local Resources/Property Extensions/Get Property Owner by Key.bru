@@ -1,0 +1,27 @@
+meta {
+  name: Get Property Owner by Key
+  type: http
+  seq: 36
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/PropertyOwner('{{ownerKey}}')
+  body: none
+  auth: bearer
+}
+
+params:query {
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+vars:pre-request {
+  ownerKey:
+}
+
+docs {
+  Récupère un propriétaire par sa clé (OwnerKey).
+  Définir ownerKey dans les variables avant exécution.
+}

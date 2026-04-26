@@ -1,0 +1,24 @@
+meta {
+  name: Member with Expand
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/Member?$expand=OtherPhone,SocialMedia,CityOrTownshipServed&$top=5
+  body: none
+  auth: bearer
+}
+
+params:query {
+  $expand: OtherPhone,SocialMedia,CityOrTownshipServed
+  $top: 5
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+docs {
+  Récupère les membres avec leurs téléphones, réseaux sociaux et villes desservies.
+}

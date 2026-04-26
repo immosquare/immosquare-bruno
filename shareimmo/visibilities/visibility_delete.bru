@@ -1,0 +1,17 @@
+meta {
+  name: visibility_delete
+  type: http
+  seq: 3
+}
+
+delete {
+  url: https://{{host}}/api/v2/visibilities/50
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  ApiKey: {{apiKey}}
+  ApiToken: {{apiToken}}
+}

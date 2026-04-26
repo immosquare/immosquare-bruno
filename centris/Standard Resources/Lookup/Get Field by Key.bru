@@ -1,0 +1,27 @@
+meta {
+  name: Get Field by Key
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/Field('{{fieldKey}}')
+  body: none
+  auth: bearer
+}
+
+params:query {
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+vars:pre-request {
+  fieldKey:
+}
+
+docs {
+  Récupère une définition de champ spécifique par sa clé (FieldKey).
+  Définir fieldKey dans les variables avant exécution.
+}

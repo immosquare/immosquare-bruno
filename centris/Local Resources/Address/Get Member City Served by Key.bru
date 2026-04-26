@@ -1,0 +1,27 @@
+meta {
+  name: Get Member City Served by Key
+  type: http
+  seq: 14
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/MemberCityOrTownshipServed('{{memberCityOrTownshipServedKey}}')
+  body: none
+  auth: bearer
+}
+
+params:query {
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+vars:pre-request {
+  memberCityOrTownshipServedKey:
+}
+
+docs {
+  Récupère une ville desservie par un courtier par sa clé (MemberCityOrTownshipServedKey).
+  Définir memberCityOrTownshipServedKey dans les variables avant exécution.
+}

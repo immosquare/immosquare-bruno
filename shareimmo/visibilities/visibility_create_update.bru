@@ -1,0 +1,35 @@
+meta {
+  name: visibility_create_update
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://{{host}}/api/v2/visibilities
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  ApiKey: {{apiKey}}
+  ApiToken: {{apiToken}}
+}
+
+body:json {
+  {
+    "property_uid": "50",
+    "visibility":{
+      "start": "2017-03-01",
+      "until": "2017-03-31",
+      "international": 0,
+      "youtube":1,
+      "canada":{
+        "louer_com": 1,
+        "lespac": 1,
+        "craigslist":0
+      }
+    }
+  }
+  
+}

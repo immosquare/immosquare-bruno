@@ -1,0 +1,32 @@
+meta {
+  name: tools-call
+  type: http
+  seq: 3
+}
+
+post {
+  url: https://{{baseurl}}/mcp
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: Bearer {{apiKey}}---{{apiToken}}
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "jsonrpc": "2.0",
+    "id": 3,
+    "method": "tools/call",
+    "params": {
+      "name": "mlsconnect_search_properties",
+      "arguments": {
+        "transaction_type": "for-sale",
+        "fields": "id,reference,area",
+        "per_page": "5"
+      }
+    }
+  }
+}

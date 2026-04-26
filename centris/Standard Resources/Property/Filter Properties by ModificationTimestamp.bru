@@ -1,0 +1,28 @@
+meta {
+  name: Filter Properties by ModificationTimestamp
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/Property?$filter=ModificationTimestamp gt 2024-01-01T00:00:00Z&$orderby=ModificationTimestamp asc&$top=100&$count=true
+  body: none
+  auth: bearer
+}
+
+params:query {
+  $filter: ModificationTimestamp gt 2024-01-01T00:00:00Z
+  $orderby: ModificationTimestamp asc
+  $top: 100
+  $count: true
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+docs {
+  Récupère les propriétés modifiées après une date donnée.
+  Utile pour la synchronisation incrémentale.
+  Le ModificationTimestamp est mis à jour quand la propriété OU ses ressources enfants changent.
+}

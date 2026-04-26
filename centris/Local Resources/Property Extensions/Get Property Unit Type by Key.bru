@@ -1,0 +1,27 @@
+meta {
+  name: Get Property Unit Type by Key
+  type: http
+  seq: 24
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/PropertyUnitTypes('{{unitTypeKey}}')
+  body: none
+  auth: bearer
+}
+
+params:query {
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+vars:pre-request {
+  unitTypeKey:
+}
+
+docs {
+  Récupère un type d'unité par sa clé (UnitTypeKey).
+  Définir unitTypeKey dans les variables avant exécution.
+}

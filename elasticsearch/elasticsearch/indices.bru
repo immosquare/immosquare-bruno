@@ -1,0 +1,15 @@
+meta {
+  name: indices
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{protocol}}://{{user}}:{{password}}@{{base_url}}:9200/_cat/indices
+  body: json
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

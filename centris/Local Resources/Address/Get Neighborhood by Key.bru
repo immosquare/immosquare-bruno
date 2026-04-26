@@ -1,0 +1,27 @@
+meta {
+  name: Get Neighborhood by Key
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/Neighborhood('{{neighborhoodKey}}')
+  body: none
+  auth: bearer
+}
+
+params:query {
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+vars:pre-request {
+  neighborhoodKey:
+}
+
+docs {
+  Récupère un quartier spécifique par sa clé (NeighborhoodKey).
+  Définir neighborhoodKey dans les variables avant exécution.
+}

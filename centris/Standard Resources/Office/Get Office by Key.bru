@@ -1,0 +1,27 @@
+meta {
+  name: Get Office by Key
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/Office('{{officeKey}}')
+  body: none
+  auth: bearer
+}
+
+params:query {
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+vars:pre-request {
+  officeKey:
+}
+
+docs {
+  Récupère un bureau spécifique par sa clé (OfficeKey).
+  Définir officeKey dans les variables avant exécution.
+}

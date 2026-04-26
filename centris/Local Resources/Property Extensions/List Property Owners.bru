@@ -1,0 +1,24 @@
+meta {
+  name: List Property Owners
+  type: http
+  seq: 35
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/PropertyOwner?$top=20&$count=true
+  body: none
+  auth: bearer
+}
+
+params:query {
+  $top: 20
+  $count: true
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+docs {
+  Liste les propriétaires des propriétés.
+}

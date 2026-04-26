@@ -1,0 +1,322 @@
+meta {
+  name: property_create_update
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://{{host}}/api/v2/properties/
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  ApiKey: {{apiKey}}
+  ApiToken: {{apiToken}}
+}
+
+body:json {
+  {
+    "uid":                "2a7192c3-b561-4771-a0f3-d777f1ded93b",
+    "reference":          "Abc34",
+    "account_uid":        "1",
+    "online":             1,
+    "classification_id":  201,
+    "status_id":          2,
+    "listing_id":         1,
+    "year_of_built":      null,
+    "building_uid":       null,
+    "unit":               null,
+    "level":              null,
+    "cadastre":           null,
+    "flag_id":            5,
+    "availability_date":  null,
+    "is_luxurious":       null,
+    "virtual_visit_link": null,
+    "homestaging_link":   null,
+    "youtube_link":       null,
+    "address": {
+      "address_visibility":         0,
+      "address_formatted":          null,
+      "street_number":              "20",
+      "street_name":                "Rue des Brice",
+      "zipcode":                    "54000",
+      "locality":                   "Nancy",
+      "sublocality":                null,
+      "administrative_area_level1": null,
+      "administrative_area_level2": null,
+      "country":                    "FR",
+      "latitude":                   null,
+      "longitude":                  null
+    },
+    "area": {
+      "living":  150,
+      "land":    200,
+      "balcony": null,
+      "unit_id": null
+    },
+    "rooms": {
+      "rooms":       null,
+      "bathrooms":   1,
+      "bedrooms":    2,
+      "showerrooms": null,
+      "toilets":     null
+    },
+    "title": {
+      "fr": "Appartement À Vendre",
+      "en": null,
+      "de": null,
+      "nl": null,
+      "it": null,
+      "es": null,
+      "pt": null
+    },
+    "description_short": {
+      "fr": "Bel appartement de 150m² à vendre à Nancy Meurthe-et-Moselle. En bon état, avec 2 chambres et 2 salons spacieux. Situé dans un quartier recherché. Parfait pour une famille ou un investisseur. Ne manquez pas cette opportunité!",
+      "en": null,
+      "de": null,
+      "nl": null,
+      "it": null,
+      "es": null,
+      "pt": null
+    },
+    "description": {
+      "fr": "Bel appartement de 150m² à vendre à Nancy Meurthe-et-Moselle. En bon état, avec 2 chambres et 2 salons spacieux. Situé dans un quartier recherché. Parfait pour une famille ou un investisseur. Ne manquez pas cette opportunité!",
+      "en": null,
+      "de": null,
+      "nl": null,
+      "it": null,
+      "es": null,
+      "pt": null
+    },
+    "url": {
+      "fr": null,
+      "en": null,
+      "de": null,
+      "nl": null,
+      "it": null,
+      "es": null,
+      "pt": null
+    },
+    "financial": {
+      "price":                               500000,
+      "rent":                                500000,
+      "currency":                            "EUR",
+      "price_with_tax":                      null,
+      "fees":                                null,
+      "fees_frequency":                      null,
+      "rent_frequency":                      30,
+      "tax1_annual":                         null,
+      "tax2_annual":                         null,
+      "income_annual":                       null,
+      "deposit":                             null,
+      "seller_honorary_percentage":          null,
+      "seller_honorary":                     null,
+      "buyer_honorary_percentage":           null,
+      "buyer_honorary":                      null,
+      "seller_net_price":                    null,
+      "total_honorary":                      null,
+      "other_fees":                          null,
+      "inventory":                           null,
+      "property_fees_payment_method_id":     null,
+      "property_honorary_payment_method_id": null
+    },
+    "france": {
+      "dpe_indice":          "C",
+      "dpe_value":           200,
+      "dpe_id":              null,
+      "ges_indice":          "C",
+      "ges_value":           20,
+      "alur_is_condo":       null,
+      "alur_units":          null,
+      "alur_uninhabitables": null,
+      "alur_spending":       null,
+      "alur_legal_action":   null,
+      "mandat_exclusif":     null
+    },
+    "belgium": {
+      "peb_indice":           null,
+      "peb_value":            null,
+      "peb_id":               null,
+      "building_permit":      null,
+      "done_assignments":     null,
+      "preemption_property":  null,
+      "subdivision_permits":  null,
+      "sensitive_flood_area": null,
+      "delimited_flood_zone": null,
+      "risk_area":            null
+    },
+    "other": {
+      "orientation": {
+        "north": null,
+        "south": null,
+        "east":  null,
+        "west":  null
+      },
+      "inclusion": {
+        "air_conditioning": null,
+        "hot_water":        null,
+        "heated":           null,
+        "electricity":      null,
+        "furnished":        null,
+        "fridge":           null,
+        "cooker":           null,
+        "dishwasher":       null,
+        "dryer":            null,
+        "washer":           null,
+        "microwave":        null
+      },
+      "detail": {
+        "elevator":          null,
+        "laundry":           null,
+        "garbage_chute":     null,
+        "common_space":      null,
+        "janitor":           null,
+        "gym":               null,
+        "golf":              null,
+        "tennis":            null,
+        "sauna":             null,
+        "spa":               null,
+        "inside_pool":       null,
+        "outside_pool":      null,
+        "inside_parking":    null,
+        "outside_parking":   null,
+        "parking_on_street": null,
+        "garagebox":         null
+      },
+      "half_furnished": {
+        "living_room": null,
+        "bedrooms":    null,
+        "kitchen":     null,
+        "other":       null
+      },
+      "indoor": {
+        "attic":                null,
+        "attic_convertible":    null,
+        "attic_converted":      null,
+        "cellar":               null,
+        "central_vacuum":       null,
+        "entries_washer_dryer": null,
+        "entries_dishwasher":   null,
+        "fireplace":            null,
+        "storage":              null,
+        "no_smoking":           null,
+        "double_glazing":       null,
+        "triple_glazing":       null
+      },
+      "floor": {
+        "carpet":   null,
+        "wood":     null,
+        "floating": null,
+        "ceramic":  null,
+        "parquet":  null,
+        "cushion":  null,
+        "vinyle":   null,
+        "lino":     null,
+        "marble":   null
+      },
+      "exterior": {
+        "land_access":   null,
+        "back_balcony":  null,
+        "front_balcony": null,
+        "private_patio": null,
+        "storage":       null,
+        "terrace":       null,
+        "veranda":       null,
+        "garden":        null,
+        "sea_view":      null,
+        "mountain_view": null
+      },
+      "accessibility": {
+        "elevator":         null,
+        "balcony":          null,
+        "grab_bar":         null,
+        "wider_corridors":  null,
+        "lowered_switches": null,
+        "ramp":             null
+      },
+      "senior": {
+        "autonomy":            null,
+        "half_autonomy":       null,
+        "no_autonomy":         null,
+        "meal":                null,
+        "nursery":             null,
+        "domestic_help":       null,
+        "community":           null,
+        "activities":          null,
+        "validated_residence": null,
+        "housing_cooperative": null
+      },
+      "pet": {
+        "allow":         null,
+        "cat":           null,
+        "dog":           null,
+        "little_dog":    null,
+        "cage_aquarium": null,
+        "not_allow":     null
+      },
+      "service": {
+        "internet": null,
+        "tv":       null,
+        "tv_sat":   null,
+        "phone":    null
+      },
+      "composition": {
+        "bar":             null,
+        "living":          null,
+        "dining":          null,
+        "separate_toilet": null,
+        "open_kitchen":    null
+      },
+      "heating": {
+        "electric":      null,
+        "solar":         null,
+        "gaz":           null,
+        "condensation":  null,
+        "fuel":          null,
+        "heat_pump":     null,
+        "floor_heating": null
+      },
+      "transport": {
+        "bicycle_path":     null,
+        "public_transport": null,
+        "public_bike":      null,
+        "subway":           null,
+        "train_station":    null
+      },
+      "security": {
+        "guardian":        null,
+        "alarm":           null,
+        "intercom":        null,
+        "camera":          null,
+        "smoke_dectector": null
+      }
+    },
+    "documents": [
+    {
+     "url": "https://samples-photos.com/properties/canada/app_2/2.jpg"
+    } 
+    ],
+    "pictures":           [
+      {
+        "uid":                 "68d54761-488a-4efc-9bcd-d6f030f9e375",
+        "need_to_be_uploaded": true,
+        "url":                 "https://samples-photos.com/properties/canada/app_2/2.jpg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEDEaCWV1LXdlc3QtMSJIMEYCIQCu6LE7L2WjZup4P5C4HKNv4RkkrMzrgymQVnRJ0AB%2F8QIhALMNcaw24fXEO5AA3qBhgXuLBY2GD4jdESz6x%2BGdyJXqKo0ECHoQAhoMNjI0OTQ3MjQ1MjM3IgyGrJBu5MFeCEgodkMq6gMeuTyREQOkKs0VL%2BrHnA%2BG3TuVjr%2FhMFR98WVKflDvx0r9LClykTjRVw9skPnqGTzIxibIdrt4xibcIK1qtpm2K%2B6Nb0fwnHUf9w0lu6Y%2FUxDC9IqJsQIIpyV1HPMNfrzqt2TXIJYT94eCqEt%2BHdju7XS9IfcJp30zsbQFW8EoOYEesp12zasY3GclPt1FvZEPe4%2FZo8EQyoMkGxBfPs71YHQ1ZUhW4aART2DFDcqgtYOOV3%2BhGNFIulSD6m45SGInngNf1M1DXdHONisj2ElhwOKgD821gvCzTifjFLfbblizTIBtO5qnKIiv90MTI%2FrWHLolobYmpUIroU1y87LN%2Bq3NE7s%2FQz5jjWp5mqhbaq%2FyRKPlLz0Qjb8z6GCFLfSIiMyu5jrkK9WgQucRx7KULAqFtBaspwOe6l7R9Lh27sG9areWCoY90PpUGR2HLhIwTkhBTebijYlxPoAIMPmV7SexsIg1GZI4HD2OU3jBIopQ9lZ3hbrsSuj%2FwjD53CBFmMj8EGPTtJHFVAK%2FxR8uKLVJAw82vrzCiMy%2FrvUZEHqLbPsT0rgbSpeUBda%2BZl5kfpzqqWm1zRIwDTmil5LTldBQHN%2BdAV88znU4b7ku1bJ0uHj1N21viywY4POpAeDI9sECkpeoIil5MO3Sn7EGOqQBDq%2BlNuCw%2FPV1Z6VS4yT9sRXXtqeyZ38BEjai3Z3NhhsFCzMMsIBDtlkK4yV4FSQzu6WJv71YGcxl%2Bz2cB8FTK2CsydDLlLEoeUmdsaxZfm8t5DG8lfzgDcVqhhQ%2FT2yZMmbk9vjS61p4R7aLMFaPNVVglFf2WPLnAnDfWNoLGtJOnd0tl1JbxA7WMARVZDG5XODEP%2FUX9cFF1MiMs4x97DyqtDw%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAZDAOCGC2Y5GG3KGW%2F20240423%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20240423T172146Z&X-Amz-SignedHeaders=host&X-Amz-Expires=7200&X-Amz-Signature=86e7e50e7b1c1c7abfd2767c3e9a48585b185af84123e469d93282dd9ed392b1",
+        "position":            1
+      },
+      {
+        "uid":                 "76d0e973-68a8-471d-9731-030262651ece1",
+        "need_to_be_uploaded": true,
+        "url":                 "https://samples-photos.com/properties/canada/app_2/3.jpg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEDEaCWV1LXdlc3QtMSJIMEYCIQCu6LE7L2WjZup4P5C4HKNv4RkkrMzrgymQVnRJ0AB%2F8QIhALMNcaw24fXEO5AA3qBhgXuLBY2GD4jdESz6x%2BGdyJXqKo0ECHoQAhoMNjI0OTQ3MjQ1MjM3IgyGrJBu5MFeCEgodkMq6gMeuTyREQOkKs0VL%2BrHnA%2BG3TuVjr%2FhMFR98WVKflDvx0r9LClykTjRVw9skPnqGTzIxibIdrt4xibcIK1qtpm2K%2B6Nb0fwnHUf9w0lu6Y%2FUxDC9IqJsQIIpyV1HPMNfrzqt2TXIJYT94eCqEt%2BHdju7XS9IfcJp30zsbQFW8EoOYEesp12zasY3GclPt1FvZEPe4%2FZo8EQyoMkGxBfPs71YHQ1ZUhW4aART2DFDcqgtYOOV3%2BhGNFIulSD6m45SGInngNf1M1DXdHONisj2ElhwOKgD821gvCzTifjFLfbblizTIBtO5qnKIiv90MTI%2FrWHLolobYmpUIroU1y87LN%2Bq3NE7s%2FQz5jjWp5mqhbaq%2FyRKPlLz0Qjb8z6GCFLfSIiMyu5jrkK9WgQucRx7KULAqFtBaspwOe6l7R9Lh27sG9areWCoY90PpUGR2HLhIwTkhBTebijYlxPoAIMPmV7SexsIg1GZI4HD2OU3jBIopQ9lZ3hbrsSuj%2FwjD53CBFmMj8EGPTtJHFVAK%2FxR8uKLVJAw82vrzCiMy%2FrvUZEHqLbPsT0rgbSpeUBda%2BZl5kfpzqqWm1zRIwDTmil5LTldBQHN%2BdAV88znU4b7ku1bJ0uHj1N21viywY4POpAeDI9sECkpeoIil5MO3Sn7EGOqQBDq%2BlNuCw%2FPV1Z6VS4yT9sRXXtqeyZ38BEjai3Z3NhhsFCzMMsIBDtlkK4yV4FSQzu6WJv71YGcxl%2Bz2cB8FTK2CsydDLlLEoeUmdsaxZfm8t5DG8lfzgDcVqhhQ%2FT2yZMmbk9vjS61p4R7aLMFaPNVVglFf2WPLnAnDfWNoLGtJOnd0tl1JbxA7WMARVZDG5XODEP%2FUX9cFF1MiMs4x97DyqtDw%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAZDAOCGC2Y5GG3KGW%2F20240423%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20240423T172146Z&X-Amz-SignedHeaders=host&X-Amz-Expires=7200&X-Amz-Signature=2e65cb55ca713da35591995ab0a6ad6b18df2848e5f4bcc061e080934ee9f0e8",
+        "position":            2
+      },
+      {
+        "uid":                 "a319b9b4-bb66-430b-83db-a46981f5f80c",
+        "need_to_be_uploaded": true,
+        "url":                 "https://samples-photos.com/properties/canada/app_2/4.jpg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEDEaCWV1LXdlc3QtMSJIMEYCIQCu6LE7L2WjZup4P5C4HKNv4RkkrMzrgymQVnRJ0AB%2F8QIhALMNcaw24fXEO5AA3qBhgXuLBY2GD4jdESz6x%2BGdyJXqKo0ECHoQAhoMNjI0OTQ3MjQ1MjM3IgyGrJBu5MFeCEgodkMq6gMeuTyREQOkKs0VL%2BrHnA%2BG3TuVjr%2FhMFR98WVKflDvx0r9LClykTjRVw9skPnqGTzIxibIdrt4xibcIK1qtpm2K%2B6Nb0fwnHUf9w0lu6Y%2FUxDC9IqJsQIIpyV1HPMNfrzqt2TXIJYT94eCqEt%2BHdju7XS9IfcJp30zsbQFW8EoOYEesp12zasY3GclPt1FvZEPe4%2FZo8EQyoMkGxBfPs71YHQ1ZUhW4aART2DFDcqgtYOOV3%2BhGNFIulSD6m45SGInngNf1M1DXdHONisj2ElhwOKgD821gvCzTifjFLfbblizTIBtO5qnKIiv90MTI%2FrWHLolobYmpUIroU1y87LN%2Bq3NE7s%2FQz5jjWp5mqhbaq%2FyRKPlLz0Qjb8z6GCFLfSIiMyu5jrkK9WgQucRx7KULAqFtBaspwOe6l7R9Lh27sG9areWCoY90PpUGR2HLhIwTkhBTebijYlxPoAIMPmV7SexsIg1GZI4HD2OU3jBIopQ9lZ3hbrsSuj%2FwjD53CBFmMj8EGPTtJHFVAK%2FxR8uKLVJAw82vrzCiMy%2FrvUZEHqLbPsT0rgbSpeUBda%2BZl5kfpzqqWm1zRIwDTmil5LTldBQHN%2BdAV88znU4b7ku1bJ0uHj1N21viywY4POpAeDI9sECkpeoIil5MO3Sn7EGOqQBDq%2BlNuCw%2FPV1Z6VS4yT9sRXXtqeyZ38BEjai3Z3NhhsFCzMMsIBDtlkK4yV4FSQzu6WJv71YGcxl%2Bz2cB8FTK2CsydDLlLEoeUmdsaxZfm8t5DG8lfzgDcVqhhQ%2FT2yZMmbk9vjS61p4R7aLMFaPNVVglFf2WPLnAnDfWNoLGtJOnd0tl1JbxA7WMARVZDG5XODEP%2FUX9cFF1MiMs4x97DyqtDw%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAZDAOCGC2Y5GG3KGW%2F20240423%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20240423T172146Z&X-Amz-SignedHeaders=host&X-Amz-Expires=7200&X-Amz-Signature=b95f78f0951ea4bc13881cd739a43313916de22af11dd49ae060e013a2a1c6c5",
+        "position":            3
+      }
+    ]
+  }
+}

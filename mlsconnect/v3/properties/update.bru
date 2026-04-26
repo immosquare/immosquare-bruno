@@ -1,0 +1,35 @@
+meta {
+  name: update
+  type: http
+  seq: 5
+}
+
+patch {
+  url: https://{{baseurl}}/v3/properties/:id
+  body: json
+  auth: none
+}
+
+params:path {
+  id: b1eBlK
+}
+
+headers {
+  apiKey: {{apiKey}}
+  apiToken: {{apiToken}}
+}
+
+body:json {
+  {
+    "agency": {
+      "id": "ByDOnA"
+    },
+    "mls_board": {
+      "id": "Yv68Wm"
+    },
+    "surface_areas": {
+      "area_total": 141
+    }
+  }
+  
+}

@@ -1,0 +1,20 @@
+meta {
+  name: Get Schema
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/$metadata
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+docs {
+  Récupère le schéma complet du modèle de données OData.
+  Retourne la définition de toutes les entités, propriétés et relations.
+}

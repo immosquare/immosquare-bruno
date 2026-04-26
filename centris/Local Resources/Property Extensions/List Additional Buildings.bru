@@ -1,0 +1,24 @@
+meta {
+  name: List Additional Buildings
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/PropertyAdditionalBuilding?$top=20&$count=true
+  body: none
+  auth: bearer
+}
+
+params:query {
+  $top: 20
+  $count: true
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+docs {
+  Liste les bâtiments additionnels (garage, cabanon, etc.).
+}

@@ -1,0 +1,22 @@
+meta {
+  name: retrieve
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://{{baseurl}}/v3/projects/search/WaMmKW
+  body: json
+  auth: inherit
+}
+
+headers {
+  apiKey: {{apiKey}}
+  apiToken: {{apiToken}}
+}
+
+body:json {
+  {
+   "active": true
+  }
+}

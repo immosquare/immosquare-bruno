@@ -1,0 +1,21 @@
+meta {
+  name: cart
+  type: http
+  seq: 7
+}
+
+get {
+  url: https://{{baseurl}}/v3/agencies/:id/cart/:cart_type
+  body: none
+  auth: none
+}
+
+params:path {
+  id: oAlYy0
+  cart_type: software
+}
+
+headers {
+  apiKey: {{apiKey}}
+  apiToken: {{apiToken}}
+}

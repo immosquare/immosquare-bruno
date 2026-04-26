@@ -1,0 +1,27 @@
+meta {
+  name: Properties by Property Type
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/Property?$filter=PropertyType eq 'Residential' and StandardStatus eq 'Active'&$top=20&$count=true
+  body: none
+  auth: bearer
+}
+
+params:query {
+  $filter: PropertyType eq 'Residential' and StandardStatus eq 'Active'
+  $top: 20
+  $count: true
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+docs {
+  Filtre les propriétés par type.
+  Types courants: Residential, Commercial, Land, etc.
+  Utiliser le Lookup PropertyType pour voir toutes les valeurs.
+}

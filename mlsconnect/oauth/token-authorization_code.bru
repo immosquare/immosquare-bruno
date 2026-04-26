@@ -1,0 +1,29 @@
+meta {
+  name: token-authorization_code
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://{{baseurl}}/oauth/token
+  body: json
+  auth: none
+}
+
+params:query {
+  : 
+}
+
+body:json {
+  {
+    "grant_type": "authorization_code",
+    "code": "1cf5126b-1ec2-4c4d-aace-75781333b47f",
+    "redirect_uri": "https://wgroupe.immosquare.me:4001/users/auth/mlsconnect/callback",
+    "client_id": "E1henD5B5EFm44H6PwiJd0BKBeua_arzcrMoR6D93Sg",
+    "client_secret": "CAKKJi4IOX4Ynx3l6CvG9N7GlQpuKG5VepUbjxBhRRU"
+  }
+}
+
+body:multipart-form {
+  grant_type: refresh_token
+}

@@ -1,0 +1,15 @@
+meta {
+  name: infos
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{protocol}}://{{user}}:{{password}}@{{base_url}}:9200
+  body: json
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

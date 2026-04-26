@@ -1,0 +1,24 @@
+meta {
+  name: List Property Mortgages
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/PropertyMortgage?$top=20&$count=true
+  body: none
+  auth: bearer
+}
+
+params:query {
+  $top: 20
+  $count: true
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+docs {
+  Liste les hypothèques des propriétés.
+}

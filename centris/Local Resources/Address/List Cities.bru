@@ -1,0 +1,24 @@
+meta {
+  name: List Cities
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/CityOrTownship?$top=100&$count=true
+  body: none
+  auth: bearer
+}
+
+params:query {
+  $top: 100
+  $count: true
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+docs {
+  Liste les villes et municipalités.
+}

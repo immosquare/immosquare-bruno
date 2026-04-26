@@ -1,0 +1,21 @@
+meta {
+  name: show
+  type: http
+  seq: 2
+}
+
+get {
+  url: https://{{baseurl}}/v3/locations/administrative_area_level1/:id
+  body: none
+  auth: inherit
+}
+
+headers {
+  apiKey: {{apiKey}}
+  apiToken: {{apiToken}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

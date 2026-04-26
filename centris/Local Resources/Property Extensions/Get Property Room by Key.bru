@@ -1,0 +1,27 @@
+meta {
+  name: Get Property Room by Key
+  type: http
+  seq: 11
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/PropertyRooms('{{roomKey}}')
+  body: none
+  auth: bearer
+}
+
+params:query {
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+vars:pre-request {
+  roomKey:
+}
+
+docs {
+  Récupère une pièce spécifique par sa clé (RoomKey).
+  Définir roomKey dans les variables avant exécution.
+}

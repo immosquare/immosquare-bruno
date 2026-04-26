@@ -1,0 +1,27 @@
+meta {
+  name: Get Property Zoning by Key
+  type: http
+  seq: 18
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/PropertyZoning('{{zoningKey}}')
+  body: none
+  auth: bearer
+}
+
+params:query {
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+vars:pre-request {
+  zoningKey:
+}
+
+docs {
+  Récupère un zonage spécifique par sa clé (ZoningKey).
+  Définir zoningKey dans les variables avant exécution.
+}

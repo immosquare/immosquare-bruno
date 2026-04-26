@@ -1,0 +1,24 @@
+meta {
+  name: ping
+  type: http
+  seq: 4
+}
+
+post {
+  url: https://{{baseurl}}/mcp
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: Bearer {{apiKey}}---{{apiToken}}
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "jsonrpc": "2.0",
+    "id": 4,
+    "method": "ping"
+  }
+}

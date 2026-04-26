@@ -1,0 +1,27 @@
+meta {
+  name: Get Property Rented Equipment by Key
+  type: http
+  seq: 38
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/PropertyRentedEquipment('{{rentedEquipmentKey}}')
+  body: none
+  auth: bearer
+}
+
+params:query {
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+vars:pre-request {
+  rentedEquipmentKey:
+}
+
+docs {
+  Récupère un équipement loué par sa clé (RentedEquipmentKey).
+  Définir rentedEquipmentKey dans les variables avant exécution.
+}

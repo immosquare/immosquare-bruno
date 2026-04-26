@@ -1,0 +1,24 @@
+meta {
+  name: List Translations
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/Translation?$top=50&$count=true
+  body: none
+  auth: bearer
+}
+
+params:query {
+  $top: 50
+  $count: true
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+docs {
+  Liste les traductions disponibles.
+}

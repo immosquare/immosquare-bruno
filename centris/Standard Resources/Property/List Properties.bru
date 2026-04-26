@@ -1,0 +1,25 @@
+meta {
+  name: List Properties
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/Property?$top=10&$count=true
+  body: none
+  auth: bearer
+}
+
+params:query {
+  $top: 10
+  $count: true
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+docs {
+  Liste les propriétés disponibles.
+  Paramètres OData supportés: $select, $filter, $orderby, $expand, $skip, $top, $count
+}

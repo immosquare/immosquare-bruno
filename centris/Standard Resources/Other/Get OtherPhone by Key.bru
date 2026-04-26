@@ -1,0 +1,27 @@
+meta {
+  name: Get OtherPhone by Key
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/OtherPhone('{{otherPhoneKey}}')
+  body: none
+  auth: bearer
+}
+
+params:query {
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+vars:pre-request {
+  otherPhoneKey:
+}
+
+docs {
+  Récupère un numéro de téléphone additionnel par sa clé (OtherPhoneKey).
+  Définir otherPhoneKey dans les variables avant exécution.
+}

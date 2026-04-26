@@ -1,0 +1,24 @@
+meta {
+  name: List City Groupings
+  type: http
+  seq: 11
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/CityOrTownshipGrouping?$top=50&$count=true
+  body: none
+  auth: bearer
+}
+
+params:query {
+  $top: 50
+  $count: true
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+docs {
+  Liste les regroupements de villes/municipalités.
+}

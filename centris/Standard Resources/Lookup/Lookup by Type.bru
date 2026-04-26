@@ -1,0 +1,24 @@
+meta {
+  name: Lookup by Type
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/odata/Lookup?$filter=LookupName eq 'PropertyType'
+  body: none
+  auth: bearer
+}
+
+params:query {
+  $filter: LookupName eq 'PropertyType'
+}
+
+auth:bearer {
+  token: {{apiKey}}
+}
+
+docs {
+  Récupère les valeurs d'un type de lookup spécifique.
+  Types courants: PropertyType, PropertySubType, StandardStatus, Heating, Cooling, Roof, Foundation, etc.
+}
