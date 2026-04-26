@@ -14,7 +14,7 @@ Two environments in `environments/`:
 - **development** — `baseurl: immosquare.me:4005`, includes `ubiflow_password` secret
 - **production** — `baseurl: monitoring.immosquare.com`
 
-Secret variables (managed in Bruno UI, never committed): `bearer_token`, `bearer_token_emails`, `bearer_token_slack`, `bearer_token_gateways`.
+Secret variables (managed in Bruno UI, never committed): `bearer_token`, `bearer_token_emails`, `bearer_token_slack`, `bearer_token_gateways`, `dns_jwt`. The `development` environment also defines `ubiflow_password`.
 
 ### Request collections
 
@@ -24,7 +24,7 @@ Secret variables (managed in Bruno UI, never committed): `bearer_token`, `bearer
 | `emails/`   | Send emails via `POST /api/emails/send`                        | Bearer (`bearer_token_emails`) |
 | `slack/`    | Send Slack notifications via `POST /api/slack/notify`          | Bearer (`bearer_token_slack`) |
 | `gateways/` | Gateway sync via `POST /api/gateways/:id/sync`                | Bearer (`bearer_token_gateways`) |
-| `dns/`      | DNS zone record management (create/get)                        | Static JWT in headers   |
+| `dns/`      | DNS zone record management (create/get)                        | JWT in headers (`dns_jwt`) |
 | `v1/`       | Centris broker APIs                                            | None                    |
 | `ubiflow/`  | Ubiflow auth + listing retrieval (post-response script saves token) | None / Bearer from login |
 
