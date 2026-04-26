@@ -44,3 +44,5 @@ Toujours lire le `CLAUDE.md` local d'une collection (s'il existe) avant d'y modi
 - Pas de code applicatif Rails/JS — uniquement des collections d'API.
 - Pas de tests automatisés exécutables en CI (les `tests` dans `.bru` tournent uniquement quand on lance la requête dans Bruno).
 - Pas de `node_modules`, pas de build — c'est du texte versionné, point.
+
+Le `Gemfile` à la racine sert uniquement au tooling local (`immosquare-cleaner` pour le hook PostToolUse de Claude Code) — ce n'est pas une app Ruby.
