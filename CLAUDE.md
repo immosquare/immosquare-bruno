@@ -6,15 +6,15 @@ Guidance pour Claude Code lorsqu'il intervient sur ce dépôt.
 
 Mono-repo qui regroupe **7 collections [Bruno](https://www.usebruno.com/)** (client API open-source). Chaque sous-dossier racine est une collection autonome avec son propre `bruno.json` et ses environnements.
 
-| Dossier | Description rapide |
-|---|---|
-| `appgenerator/` | Génération d'apps internes (listglobally, pachamama) |
-| `centris/` | API Centris Data Distribution (RESO, OData) — voir `centris/CLAUDE.md` |
-| `elasticsearch/` | Requêtes Elasticsearch dev/preprod/prod |
-| `mlsconnect/` | API MlsConnect (v1, v2, v3, OAuth, MCP, webhooks) |
-| `monitoring/` | Health checks + emails + Slack + gateways + DNS — voir `monitoring/CLAUDE.md` |
-| `shareimmo/` | API Shareimmo v2 + visibilités |
-| `storeimmo/` | API Storeimmo + Immofacile |
+| Dossier          | Description rapide                                                            |
+| ---------------- | ----------------------------------------------------------------------------- |
+| `appgenerator/`  | Génération d'apps internes (listglobally, pachamama)                          |
+| `centris/`       | API Centris Data Distribution (RESO, OData) — voir `centris/CLAUDE.md`        |
+| `elasticsearch/` | Requêtes Elasticsearch dev/preprod/prod                                       |
+| `mlsconnect/`    | API MlsConnect (v1, v2, v3, OAuth, MCP, webhooks)                             |
+| `monitoring/`    | Health checks + emails + Slack + gateways + DNS — voir `monitoring/CLAUDE.md` |
+| `shareimmo/`     | API Shareimmo v2 + visibilités                                                |
+| `storeimmo/`     | API Storeimmo + Immofacile                                                    |
 
 Toujours lire le `CLAUDE.md` local d'une collection (s'il existe) avant d'y modifier des requêtes — il contient les conventions spécifiques (auth, environnements, ressources).
 

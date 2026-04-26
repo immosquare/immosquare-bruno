@@ -6,15 +6,15 @@ Ce dépôt centralise les 7 collections qui étaient auparavant éparpillées da
 
 ## Collections
 
-| Collection | Requêtes | Description |
-|---|---:|---|
-| [`appgenerator/`](./appgenerator) | 2 | Génération d'apps internes (listglobally, pachamama) |
-| [`centris/`](./centris) | 98 | API **Centris Data Distribution** (RESO) — listings immobiliers Québec |
-| [`elasticsearch/`](./elasticsearch) | 5 | Requêtes Elasticsearch (dev / preprod / prod) |
-| [`mlsconnect/`](./mlsconnect) | 87 | API MlsConnect — v1, v2, v3, OAuth, MCP, webhooks |
-| [`monitoring/`](./monitoring) | 12 | Health checks, emails, Slack, gateways, DNS, Ubiflow |
-| [`shareimmo/`](./shareimmo) | 29 | API Shareimmo v2 + visibilités |
-| [`storeimmo/`](./storeimmo) | 6 | API Storeimmo + Immofacile |
+| Collection                          | Requêtes | Description                                                            |
+| ----------------------------------- | ---:     | ---------------------------------------------------------------------- |
+| [`appgenerator/`](./appgenerator)   | 2        | Génération d'apps internes (listglobally, pachamama)                   |
+| [`centris/`](./centris)             | 98       | API **Centris Data Distribution** (RESO) — listings immobiliers Québec |
+| [`elasticsearch/`](./elasticsearch) | 5        | Requêtes Elasticsearch (dev / preprod / prod)                          |
+| [`mlsconnect/`](./mlsconnect)       | 87       | API MlsConnect — v1, v2, v3, OAuth, MCP, webhooks                      |
+| [`monitoring/`](./monitoring)       | 12       | Health checks, emails, Slack, gateways, DNS, Ubiflow                   |
+| [`shareimmo/`](./shareimmo)         | 29       | API Shareimmo v2 + visibilités                                         |
+| [`storeimmo/`](./storeimmo)         | 6        | API Storeimmo + Immofacile                                             |
 
 Chaque dossier est une **collection Bruno autonome** avec son propre `bruno.json` et ses environnements. Les collections qui en ont besoin documentent leurs spécificités dans un `CLAUDE.md` local (voir `centris/CLAUDE.md` et `monitoring/CLAUDE.md`).
 
