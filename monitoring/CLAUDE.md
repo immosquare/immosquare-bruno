@@ -30,7 +30,7 @@ Secret variables (managed in Bruno UI, never committed): `bearer_token`, `bearer
 
 ### Monitored apps
 
-Health checks cover ~12 apps across staging/preprod/production: agconnect, appgenerator, cloudphoto, mlsconnect, monitoring, myprint, prestigemls, shareimmo, socialimmo, storeimmo.
+Health checks cover 10 apps across staging, preprod, production and bnp environments: agconnect, appgenerator, cloudphoto, mlsconnect, monitoring, myprint, prestigemls, shareimmo, socialimmo, storeimmo.
 
 ## Working with .bru files
 
