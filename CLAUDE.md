@@ -37,7 +37,6 @@ Toujours lire le `CLAUDE.md` local d'une collection (s'il existe) avant d'y modi
 
 - Lister toutes les requêtes : `find <collection> -name '*.bru' -not -path '*/environments/*'`.
 - Vérifier qu'un environnement compile : ouvrir la collection dans Bruno (pas d'outil CLI utilisé ici).
-- Diff de migration depuis les anciens repos : `diff -rq /Users/jules/Sites/bruno/<collection> ./<collection> --exclude=.git --exclude=.vscode --exclude=.DS_Store`.
 
 ## Ce qui n'est PAS dans ce repo
 

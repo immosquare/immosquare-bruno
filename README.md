@@ -64,7 +64,3 @@ Les `{{variable}}` référencent les variables d'environnement définies dans `<
 - **`folder.bru`** : définit l'auth héritée et la doc d'un sous-dossier — privilégier l'héritage plutôt que de répéter `auth:bearer` dans chaque requête.
 - **Séquence (`seq`)** : numéroter les requêtes dans `meta` pour garder un ordre logique dans la sidebar Bruno.
 - **Fichiers ignorés** : `.DS_Store`, `node_modules/`, `.vscode/`, `.claude/`, `.ralph-loop.local.md` (voir `.gitignore`).
-
-## Migration depuis les anciens repos
-
-Ce dépôt remplace les 7 repos individuels qui se trouvaient sous `~/Sites/bruno/{appgenerator,centris,elasticsearch,mlsconnect,monitoring,shareimmo,storeimmo}`. Le contenu a été copié à l'identique (vérifié byte-pour-byte). Une fois la migration validée par tous les contributeurs, les anciens repos peuvent être archivés.
