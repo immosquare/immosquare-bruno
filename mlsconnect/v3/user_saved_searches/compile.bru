@@ -1,17 +1,18 @@
 meta {
-  name: show
+  name: compile
   type: http
-  seq: 2
+  seq: 3
 }
 
 get {
-  url: https://{{baseurl}}/v3/saved-searches/Vm68oN?user_id=ql4Jgm
+  url: https://{{baseurl}}/v3/saved-searches/compile?user_id=ql4Jgm&ids=n1vlpq,Vm68oN,2okemY
   body: none
   auth: none
 }
 
 params:query {
   user_id: ql4Jgm
+  ids: n1vlpq,Vm68oN,2okemY
 }
 
 headers {
