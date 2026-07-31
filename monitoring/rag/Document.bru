@@ -1,0 +1,65 @@
+meta {
+  name: Document
+  type: http
+  seq: 2
+}
+
+get {
+  url: https://{{baseurl}}/api/rag/documents/{{rag_document_id}}
+  body: none
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer {{rag_jwt}}
+}
+
+docs {
+  Contenu d'un document, à appeler pour les seules entrées dont le
+  `blob_sha` a changé depuis le dernier passage.
+
+  `rag_document_id` est posé automatiquement par la requête
+  « Manifest » — lancer celle-ci d'abord, ou renseigner l'id à la main.
+
+  Deux formes de réponse selon la nature du document :
+
+    - texte (markdown, txt, json, xml…) -> `content` porte le contenu,
+      `url` est null
+    - binaire (pdf, png, zip…)          -> `content` est null, `url`
+      pointe le CDN
+
+  Le binaire n'est jamais encodé en base64 dans la réponse : un PDF de
+  plusieurs Mo transiterait par Puma à chaque réindexation.
+}
+
+tests {
+  test("répond 200", function() {
+    expect(res.getStatus()).to.equal(200)
+  })
+
+  test("porte les mêmes métadonnées que le manifeste", function() {
+    const doc = res.getBody()
+    expect(doc.repository).to.be.a("string").and.not.be.empty
+    expect(doc.path).to.be.a("string").and.not.be.empty
+    expect(doc.blob_sha).to.be.a("string").and.not.be.empty
+  })
+
+  test("un document texte expose son contenu, un binaire expose son URL — jamais les deux, jamais aucun", function() {
+    const doc = res.getBody()
+    if (doc.binary) {
+      expect(doc.content).to.be.null
+      expect(doc.url).to.be.a("string").and.not.be.empty
+    } else {
+      expect(doc.url).to.be.null
+      expect(doc.content).to.be.a("string").and.not.be.empty
+    }
+  })
+
+  test("le markdown est rendu tel quel, sans entités HTML échappées", function() {
+    const doc = res.getBody()
+    if (doc.markdown) {
+      expect(doc.content).to.not.include("&gt;")
+      expect(doc.content).to.not.include("&lt;")
+    }
+  })
+}

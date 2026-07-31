@@ -1,0 +1,44 @@
+meta {
+  name: Unauthorized
+  type: http
+  seq: 3
+}
+
+get {
+  url: https://{{baseurl}}/api/rag/documents?per_page=1
+  body: none
+  auth: none
+}
+
+params:query {
+  per_page: 1
+}
+
+docs {
+  Requête volontairement SANS en-tête Authorization.
+
+  Elle vaut autant que les deux autres : elle prouve que la
+  documentation n'est pas exposée en clair. L'endpoint est public au
+  sens réseau, seul le JWT (`user_id` = "immosquare_rag", signé avec
+  `jwt_salt`) en ouvre l'accès.
+
+  Un jeton valide mais portant une autre identité — celui de l'API
+  geocode par exemple — est refusé de la même façon : les deux APIs
+  partagent le concern JwtAuthenticated mais pas leur constante
+  d'identité.
+
+  Ne pas « réparer » cette requête en lui ajoutant un en-tête : un 200
+  ici serait une fuite de toute la documentation interne.
+}
+
+tests {
+  test("refuse l'accès sans jeton", function() {
+    expect(res.getStatus()).to.equal(401)
+  })
+
+  test("ne divulgue rien de la documentation dans la réponse d'erreur", function() {
+    const body = res.getBody()
+    expect(body.error).to.equal("Unauthorized")
+    expect(body).to.not.have.property("documents")
+  })
+}

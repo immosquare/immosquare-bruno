@@ -1,0 +1,82 @@
+meta {
+  name: Manifest
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://{{baseurl}}/api/rag/documents?markdown=1&per_page=50
+  body: none
+  auth: inherit
+}
+
+params:query {
+  markdown: 1
+  per_page: 50
+  ~repository: rails-projects
+  ~updated_since: 2026-01-01T00:00:00Z
+}
+
+headers {
+  Authorization: Bearer {{rag_jwt}}
+}
+
+docs {
+  Manifeste de la documentation interne — le point d'entrée du
+  rapatriement différentiel côté immosquare-rag.
+
+  Renvoie une entrée par document AVEC son `blob_sha` mais SANS son
+  contenu. Le consommateur compare ce manifeste à son propre index :
+
+    - `blob_sha` différent  -> le document a changé, le retélécharger
+    - chemin absent du manifeste -> le document a disparu, le purger
+
+  C'est ce qui permet de suivre les suppressions sans que monitoring
+  ait à tenir un journal de suppressions.
+
+  Filtres optionnels (décochés par défaut dans l'onglet Query) :
+    - markdown=1        -> uniquement le texte indexable
+    - repository=<nom>  -> un seul dépôt
+    - updated_since=... -> delta depuis un horodatage ISO8601
+
+  Pagination : `per_page` par défaut 500, plafonné à 2000.
+
+  Le script post-réponse mémorise l'id du premier document markdown
+  dans `rag_document_id`, consommé par la requête « Document ».
+}
+
+script:post-response {
+  const data = res.getBody()
+  const first = (data.documents || []).find((doc) => doc.markdown)
+  if (first) {
+    bru.setVar("rag_document_id", first.id)
+  }
+}
+
+tests {
+  test("répond 200", function() {
+    expect(res.getStatus()).to.equal(200)
+  })
+
+  test("expose la pagination", function() {
+    expect(res.getBody().pagination).to.have.property("count")
+  })
+
+  test("renvoie des documents", function() {
+    expect(res.getBody().documents.length).to.be.above(0)
+  })
+
+  test("chaque entrée porte son blob_sha — sans lui le consommateur ne peut pas savoir ce qui a changé", function() {
+    res.getBody().documents.forEach((doc) => {
+      expect(doc.blob_sha).to.be.a("string").and.not.be.empty
+      expect(doc.repository).to.be.a("string").and.not.be.empty
+      expect(doc.path).to.be.a("string").and.not.be.empty
+    })
+  })
+
+  test("le manifeste ne transporte AUCUN contenu — sinon une page de 500 documents ramènerait plusieurs Mo pour rien", function() {
+    res.getBody().documents.forEach((doc) => {
+      expect(doc).to.not.have.property("content")
+    })
+  })
+}
