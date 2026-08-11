@@ -1,0 +1,36 @@
+meta {
+  name: search
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://api.notion.com/v1/search
+  body: json
+  auth: inherit
+}
+
+headers {
+  Notion-Version: 2026-03-11
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "query": "{{query}}",
+    "sort": {
+      "direction": "descending",
+      "timestamp": "last_edited_time"
+    },
+    "page_size": 100
+  }
+}
+
+vars:pre-request {
+  query:
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
