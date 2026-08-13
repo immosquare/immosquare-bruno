@@ -46,7 +46,7 @@ GEM
     htmlbeautifier (1.4.3)
     i18n (1.15.2)
       concurrent-ruby (~> 1.0)
-    immosquare-cleaner (0.1.113)
+    immosquare-cleaner (0.1.115)
       erb_lint (>= 0.7, <= 1000.0)
       htmlbeautifier (>= 1.4, <= 1000.0)
       immosquare-extensions (>= 0.1, <= 1000.0)
@@ -131,7 +131,7 @@ CHECKSUMS
   erubi (1.13.1) sha256=a082103b0885dbc5ecf1172fede897f9ebdb745a4b97a5e8dc63953db1ee4ad9
   htmlbeautifier (1.4.3) sha256=b43d08f7e2aa6ae1b5a6f0607b4ed8954c8d4a8e85fd2336f975dda1e4db385b
   i18n (1.15.2) sha256=00f9eb62412fe593b2a65a97daa75300d37abb8f7202ec748e94b6d46a9dd1b5
-  immosquare-cleaner (0.1.113) sha256=a6fb78136d1aeddf48de71d6bee98098666f476a49b61fe6d465d74045179dc4
+  immosquare-cleaner (0.1.115) sha256=ad084366da9cbda0f710d76fb247aec127c59186fcbc4d9aae343404236f6cd0
   immosquare-extensions (0.1.29) sha256=8ff3f572a32a01c4c066c1b42789ccf7b7c19affdc1bdda347f5c91b2944e4f0
   immosquare-yaml (1.0.3) sha256=72b61cfcec09973ae3455cb9a6fc8e181afa0543d25ad1ecbc5aa9c6026d872e
   json (2.21.2) sha256=1f1d3b7cf2b3ba1a69beca0bb6db13d5438b80bff3cd54cdaaa620b9b07c1c6a
