@@ -1,3 +1,10 @@
+---
+locale: fr
+tags:
+  - app:immosquare-bruno
+  - audience:technique
+---
+
 # immosquare-bruno
 
 Mono-repo regroupant les **collections [Bruno](https://www.usebruno.com/)** d'Immosquare. Bruno est un client API open-source (alternative à Postman) qui stocke chaque requête dans un fichier `.bru` versionné — ce qui permet de tout suivre dans Git.
