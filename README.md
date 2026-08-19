@@ -7,11 +7,13 @@ tags:
 
 # immosquare-bruno
 
-Mono-repo regroupant les **collections [Bruno](https://www.usebruno.com/)** d'Immosquare. Bruno est un client API open-source (alternative à Postman) qui stocke chaque requête dans un fichier `.bru` versionné — ce qui permet de tout suivre dans Git.
+Mono-repo regroupant les **collections [Bruno](https://www.usebruno.com/)** d'immosquare. Bruno est un client API open-source (alternative à Postman) qui stocke chaque requête dans un fichier `.bru` versionné — ce qui permet de tout suivre dans Git.
 
 Ce dépôt centralise les 7 collections qui étaient auparavant éparpillées dans des repos séparés sous `~/Sites/bruno/`. L'objectif est de simplifier la maintenance : un seul `git pull`, un seul historique, des conventions partagées.
 
-## Collections
+## Les 7 collections Bruno du dépôt
+
+Chaque dossier racine est une **collection Bruno autonome**, avec son propre `bruno.json` et ses environnements. Les collections qui en ont besoin documentent leurs spécificités dans un `CLAUDE.md` local (voir `centris/CLAUDE.md` et `monitoring/CLAUDE.md`). Chaque ligne donne le nombre de requêtes de la collection et l'API ou le périmètre qu'elle couvre.
 
 | Collection                          | Requêtes | Description                                                            |
 | ----------------------------------- | ---:     | ---------------------------------------------------------------------- |
@@ -23,9 +25,7 @@ Ce dépôt centralise les 7 collections qui étaient auparavant éparpillées da
 | [`shareimmo/`](./shareimmo)         | 29       | API Shareimmo v2 + visibilités                                         |
 | [`storeimmo/`](./storeimmo)         | 6        | API Storeimmo + Immofacile                                             |
 
-Chaque dossier est une **collection Bruno autonome** avec son propre `bruno.json` et ses environnements. Les collections qui en ont besoin documentent leurs spécificités dans un `CLAUDE.md` local (voir `centris/CLAUDE.md` et `monitoring/CLAUDE.md`).
-
-## Utilisation
+## Ouvrir une collection du dépôt dans Bruno
 
 1. Installer Bruno : <https://www.usebruno.com/downloads>
 2. Cloner le dépôt :
@@ -38,9 +38,9 @@ Chaque dossier est une **collection Bruno autonome** avec son propre `bruno.json
 
 > Tu peux ouvrir plusieurs collections en parallèle dans Bruno (une par onglet).
 
-## Structure d'un fichier `.bru`
+## Format des fichiers `.bru` et conventions du dépôt
 
-Format texte structuré par blocs. Exemple minimal :
+Un fichier `.bru` est un texte structuré par blocs. Exemple minimal :
 
 ```
 meta {
@@ -60,11 +60,9 @@ auth:bearer {
 }
 ```
 
-Les blocs courants : `meta`, `get`/`post`/`put`/`delete`, `headers`, `auth:bearer`, `body:json`, `query`, `vars:pre-request`, `script:pre-request`, `script:post-response`, `tests`.
+Les blocs courants : `meta`, `get`/`post`/`put`/`delete`, `headers`, `auth:bearer`, `body:json`, `query`, `vars:pre-request`, `script:pre-request`, `script:post-response`, `tests`. Les `{{variable}}` référencent les variables d'environnement définies dans `<collection>/environments/<env>.bru`.
 
-Les `{{variable}}` référencent les variables d'environnement définies dans `<collection>/environments/<env>.bru`.
-
-## Conventions
+Les conventions que suivent toutes les collections du dépôt :
 
 - **Une collection = un dossier racine.** Ne pas mélanger les requêtes de plusieurs APIs dans la même collection.
 - **Variables secrètes** (`vars:secret`) : déclarées dans le fichier d'environnement mais leur valeur reste locale (Bruno UI). Ne jamais committer un token en clair.
